@@ -85,7 +85,7 @@ sed -i 's/$wgLanguageCode = \"en/$wgLanguageCode = \"de/' LocalSettings.php
 cd maintenance
 php update.php
 
-echo Install Wikijournals Structture
+echo Install Wikijournals Structure
 
 php importDump.php < $PROJECTDIR/wikijournals_structure/wikijournalsStructure.xml
 
