@@ -1,0 +1,1084 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.10/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.10/ http://www.mediawiki.org/xml/export-0.10.xsd" version="0.10" xml:lang="de">
+  <siteinfo>
+    <sitename>Wikijournals</sitename>
+    <dbname>wikijournals</dbname>
+    <base>http://localhost/wikijournals/index.php/Hauptseite</base>
+    <generator>MediaWiki 1.26.2</generator>
+    <case>first-letter</case>
+    <namespaces>
+      <namespace key="-2" case="first-letter">Medium</namespace>
+      <namespace key="-1" case="first-letter">Spezial</namespace>
+      <namespace key="0" case="first-letter" />
+      <namespace key="1" case="first-letter">Diskussion</namespace>
+      <namespace key="2" case="first-letter">Benutzer</namespace>
+      <namespace key="3" case="first-letter">Benutzer Diskussion</namespace>
+      <namespace key="4" case="first-letter">Wikijournals</namespace>
+      <namespace key="5" case="first-letter">Wikijournals Diskussion</namespace>
+      <namespace key="6" case="first-letter">Datei</namespace>
+      <namespace key="7" case="first-letter">Datei Diskussion</namespace>
+      <namespace key="8" case="first-letter">MediaWiki</namespace>
+      <namespace key="9" case="first-letter">MediaWiki Diskussion</namespace>
+      <namespace key="10" case="first-letter">Vorlage</namespace>
+      <namespace key="11" case="first-letter">Vorlage Diskussion</namespace>
+      <namespace key="12" case="first-letter">Hilfe</namespace>
+      <namespace key="13" case="first-letter">Hilfe Diskussion</namespace>
+      <namespace key="14" case="first-letter">Kategorie</namespace>
+      <namespace key="15" case="first-letter">Kategorie Diskussion</namespace>
+      <namespace key="102" case="first-letter">Attribut</namespace>
+      <namespace key="103" case="first-letter">Attribut Diskussion</namespace>
+      <namespace key="104" case="first-letter">Type</namespace>
+      <namespace key="105" case="first-letter">Type talk</namespace>
+      <namespace key="106" case="first-letter">Form</namespace>
+      <namespace key="107" case="first-letter">Form talk</namespace>
+      <namespace key="108" case="first-letter">Konzept</namespace>
+      <namespace key="109" case="first-letter">Konzept Diskussion</namespace>
+      <namespace key="170" case="first-letter">Filter</namespace>
+      <namespace key="171" case="first-letter">Filter Diskussion</namespace>
+      <namespace key="274" case="first-letter">Widget</namespace>
+      <namespace key="275" case="first-letter">Widget Diskussion</namespace>
+      <namespace key="420" case="first-letter">Layer</namespace>
+      <namespace key="421" case="first-letter">Layer Diskussion</namespace>
+      <namespace key="2300" case="first-letter">Gadget</namespace>
+      <namespace key="2301" case="first-letter">Gadget Diskussion</namespace>
+      <namespace key="2302" case="case-sensitive">Gadget-Definition</namespace>
+      <namespace key="2303" case="case-sensitive">Gadget-Definition Diskussion</namespace>
+    </namespaces>
+  </siteinfo>
+  <page>
+    <title>Form:Article</title>
+    <ns>106</ns>
+    <id>2</id>
+    <revision>
+      <id>57</id>
+      <parentid>2</parentid>
+      <timestamp>2016-03-07T09:50:49Z</timestamp>
+      <contributor>
+        <username>Administrator</username>
+        <id>1</id>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="1401">&lt;noinclude&gt;
+Dies ist das Formular „Article“.
+Um eine Seite mit diesem Formular zu erstellen, gib den Seitennamen unten in das Eingabefeld ein.
+Sofern bereits eine Seite mit diesem Namen vorhanden ist, wirst du automatisch zum Formular für das Bearbeiten der Seite weitergeleitet.
+
+
+{{#forminput:form=Article}}
+
+&lt;/noinclude&gt;&lt;includeonly&gt;
+{{{info|page name={{UUID}} |create title=Neuer Artikel |edit title=Artikel bearbeiten }}}
+&lt;div id=&quot;wikiPreview&quot; style=&quot;display: none; padding-bottom: 25px; margin-bottom: 25px; border-bottom: 1px solid #AAAAAA;&quot;&gt;&lt;/div&gt;
+{{{for template|Article}}}
+{| class=&quot;formtable&quot;
+! Titel:
+| {{{field|title|mandatory}}}
+|-
+! Untertitel:
+| {{{field|subtitle|autogrow}}}
+|-
+! Rubrik:
+| {{{field|rubric|input type=text with autocomplete}}}
+|-
+! Unterrubrik:
+| {{{field|subrubric|input type=text with autocomplete}}}
+|-
+! Autor:
+| {{{field|author|input type=text with autocomplete}}}
+|-
+! Publikation:
+| {{{field|journal|input type=combobox|mandatory|property=journal|existing values only}}}
+|-
+! Ausgabe:
+| {{{field|volume|mandatory|property=volume}}}
+|-
+! Seite:
+| {{{field|pages|mandatory}}}
+|-
+! Jahr:
+| {{{field|year|mandatory|input type=year}}}
+|-
+! Artikellink:
+| {{{field|url|property=url}}}
+|}
+{{{end template}}}
+
+
+{{{standard input|minor edit}}} {{{standard input|watch}}}
+
+{{{standard input|save|label=Speichern}}}{{{standard input|cancel}}}
+&lt;/includeonly&gt;</text>
+      <sha1>4gdvfqd6fw2qo5bc5mevh4fb2gnqfsh</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Form:ArticleQuery</title>
+    <ns>106</ns>
+    <id>3</id>
+    <revision>
+      <id>58</id>
+      <parentid>3</parentid>
+      <timestamp>2016-03-07T10:03:15Z</timestamp>
+      <contributor>
+        <username>Administrator</username>
+        <id>1</id>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="896">&lt;noinclude&gt;
+Dies ist das Formular „ArticleQuery“.
+Um eine Seite mit diesem Formular zu erstellen, gib den Seitennamen unten in das Eingabefeld ein.
+Sofern bereits eine Seite mit diesem Namen vorhanden ist, wirst du automatisch zum Formular für das Bearbeiten der Seite weitergeleitet.
+
+
+{{#forminput:form=ArticleQuery}}
+
+&lt;/noinclude&gt;&lt;includeonly&gt;
+{{{info|query title=Suche Artikel}}}
+&lt;div id=&quot;wikiPreview&quot; style=&quot;display: none; padding-bottom: 25px; margin-bottom: 25px; border-bottom: 1px solid #AAAAAA;&quot;&gt;&lt;/div&gt;
+{{{for template|ArticleQuery}}}
+{| class=&quot;formtable&quot;
+! Titel:
+| {{{field|title}}}
+|-
+! Publikation:
+| {{{field|journal|input type=combobox|property=journal|existing values only}}}
+|-
+! Jahr:
+| {{{field|year|input type=year}}}
+|}
+{{{end template}}}
+
+
+{{{standard input|save}}} {{{standard input|preview}}} {{{standard input|changes}}} {{{standard input|cancel}}}
+&lt;/includeonly&gt;</text>
+      <sha1>l3r052swf62jetdnesx3jsvxsvf42py</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Form:Publication</title>
+    <ns>106</ns>
+    <id>4</id>
+    <revision>
+      <id>59</id>
+      <parentid>4</parentid>
+      <timestamp>2016-03-07T10:05:01Z</timestamp>
+      <contributor>
+        <username>Administrator</username>
+        <id>1</id>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="909">&lt;noinclude&gt;
+Dies ist das Formular „Publication“.
+Um eine Seite mit diesem Formular zu erstellen, gib den Seitennamen unten in das Eingabefeld ein.
+Sofern bereits eine Seite mit diesem Namen vorhanden ist, wirst du automatisch zum Formular für das Bearbeiten der Seite weitergeleitet.
+
+
+{{#forminput:form=Publication}}
+
+&lt;/noinclude&gt;&lt;includeonly&gt;
+{{{info|page name={{UUID}} }}}
+&lt;div id=&quot;wikiPreview&quot; style=&quot;display: none; padding-bottom: 25px; margin-bottom: 25px; border-bottom: 1px solid #AAAAAA;&quot;&gt;&lt;/div&gt;
+{{{for template|Publication}}}
+{| class=&quot;formtable&quot;
+! Titel:
+| {{{field|journal|rows=2}}}
+|-
+| Internet:
+| {{{field|PublicationUrl}}}
+|-
+| Verlag:
+| {{{field|publisher|input type=combobox|property=publisher|existing values only}}}
+|}
+{{{end template}}}
+
+{{{standard input|minor edit}}} {{{standard input|watch}}}
+
+{{{standard input|save|label=Speichern}}} {{{standard input|cancel}}}
+&lt;/includeonly&gt;</text>
+      <sha1>50j40hlplr5wsvxoobbsa5mijx9yipp</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Form:PublicationQuery</title>
+    <ns>106</ns>
+    <id>5</id>
+    <revision>
+      <id>94</id>
+      <parentid>5</parentid>
+      <timestamp>2016-03-07T11:43:31Z</timestamp>
+      <contributor>
+        <username>Administrator</username>
+        <id>1</id>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="866">&lt;noinclude&gt;
+Dies ist das Formular „PublicationQuery“.
+Um eine Seite mit diesem Formular zu erstellen, gib den Seitennamen unten in das Eingabefeld ein.
+Sofern bereits eine Seite mit diesem Namen vorhanden ist, wirst du automatisch zum Formular für das Bearbeiten der Seite weitergeleitet.
+
+
+{{#forminput:form=PublicationQuery}}
+
+&lt;/noinclude&gt;&lt;includeonly&gt;
+{{{info|query title=Suche Publikation}}}
+&lt;div id=&quot;wikiPreview&quot; style=&quot;display: none; padding-bottom: 25px; margin-bottom: 25px; border-bottom: 1px solid #AAAAAA;&quot;&gt;&lt;/div&gt;
+{{{for template|PublicationQuery}}}
+{| class=&quot;formtable&quot;
+! Titel:
+| {{{field|journal}}}
+|-
+! Verlag:
+| {{{field|publisher|input type=combobox|property=publisher|existing values only}}}
+|}
+{{{end template}}}
+
+
+{{{standard input|save}}} {{{standard input|preview}}} {{{standard input|changes}}} {{{standard input|cancel}}}
+&lt;/includeonly&gt;</text>
+      <sha1>tqs5v3lvvokfjtx58y00pxxyn0ff3r6</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Form:Publisher</title>
+    <ns>106</ns>
+    <id>6</id>
+    <revision>
+      <id>60</id>
+      <parentid>6</parentid>
+      <timestamp>2016-03-07T10:09:18Z</timestamp>
+      <contributor>
+        <username>Administrator</username>
+        <id>1</id>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="867">&lt;noinclude&gt;
+Dies ist das Formular „Publisher“.
+Um eine Seite mit diesem Formular zu erstellen, gib den Seitennamen unten in das Eingabefeld ein.
+Sofern bereits eine Seite mit diesem Namen vorhanden ist, wirst du automatisch zum Formular für das Bearbeiten der Seite weitergeleitet.
+
+
+{{#forminput:form=Publisher}}
+
+&lt;/noinclude&gt;&lt;includeonly&gt;
+{{{info|page name={{UUID}} }}}
+&lt;div id=&quot;wikiPreview&quot; style=&quot;display: none; padding-bottom: 25px; margin-bottom: 25px; border-bottom: 1px solid #AAAAAA;&quot;&gt;&lt;/div&gt;
+{{{for template|Publisher}}}
+{| class=&quot;formtable&quot;
+! Verlag:
+| {{{field|publisher}}}
+|-
+! Ort:
+| {{{field|PublisherLocation}}}
+|-
+! PLZ:
+| {{{field|PublisherZipCode}}}
+|-
+! Adresse:
+| {{{field|adress}}}
+|-
+! Homepage:
+| {{{field|PublisherHomepage}}}
+|}
+{{{end template}}}
+
+{{{standard input|save|label=Speichern}}} {{{standard input|cancel}}}
+&lt;/includeonly&gt;</text>
+      <sha1>d4iujagm67367fo3aoko47l2omjwv0f</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Form:TocQuery</title>
+    <ns>106</ns>
+    <id>7</id>
+    <revision>
+      <id>93</id>
+      <parentid>7</parentid>
+      <timestamp>2016-03-07T11:41:40Z</timestamp>
+      <contributor>
+        <username>Administrator</username>
+        <id>1</id>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="929">&lt;noinclude&gt;
+Dies ist das Formular „TocQuery“.
+Um eine Seite mit diesem Formular zu erstellen, gib den Seitennamen unten in das Eingabefeld ein.
+Sofern bereits eine Seite mit diesem Namen vorhanden ist, wirst du automatisch zum Formular für das Bearbeiten der Seite weitergeleitet.
+
+
+{{#forminput:form=TocQuery}}
+
+&lt;/noinclude&gt;&lt;includeonly&gt;
+{{{info|query title=Suche Inhaltsverzeichnis}}}
+&lt;div id=&quot;wikiPreview&quot; style=&quot;display: none; padding-bottom: 25px; margin-bottom: 25px; border-bottom: 1px solid #AAAAAA;&quot;&gt;&lt;/div&gt;
+{{{for template|TocQuery}}}
+{| class=&quot;formtable&quot;
+! Publikation:
+| {{{field|journal|mandatory|input type=combobox|property=journal|existing values only}}}
+|-
+! Jahr:
+| {{{field|year|mandatory|input type=year}}}
+|-
+! Ausgabe:
+| {{{field|volume|mandatory}}}
+|}
+{{{end template}}}
+
+
+{{{standard input|save}}} {{{standard input|preview}}} {{{standard input|changes}}} {{{standard input|cancel}}}
+&lt;/includeonly&gt;</text>
+      <sha1>57668070qcxw96ua7sv0kbw0tbxazwi</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Attribut:Author</title>
+    <ns>102</ns>
+    <id>40</id>
+    <revision>
+      <id>44</id>
+      <timestamp>2016-03-07T09:31:28Z</timestamp>
+      <contributor>
+        <username>Administrator</username>
+        <id>1</id>
+      </contributor>
+      <comment>Erstellte ein Attribut des Datentyps [[Has type::Text]].</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="55">Dies ist ein Attribut des Datentyps [[Datentyp::Text]].</text>
+      <sha1>5dmxl5let6pkprvxnglwbcfl17dvzbh</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Attribut:Url</title>
+    <ns>102</ns>
+    <id>46</id>
+    <revision>
+      <id>53</id>
+      <timestamp>2016-03-07T09:43:50Z</timestamp>
+      <contributor>
+        <username>Administrator</username>
+        <id>1</id>
+      </contributor>
+      <comment>Erstellte ein Attribut des Datentyps [[Has type::URL]].</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="54">Dies ist ein Attribut des Datentyps [[Datentyp::URL]].</text>
+      <sha1>5jo3rwp7z0691ho6c7928zd7km4o52p</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Attribut:Pages</title>
+    <ns>102</ns>
+    <id>43</id>
+    <revision>
+      <id>47</id>
+      <timestamp>2016-03-07T09:33:05Z</timestamp>
+      <contributor>
+        <username>Administrator</username>
+        <id>1</id>
+      </contributor>
+      <comment>Erstellte ein Attribut des Datentyps [[Has type::Text]].</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="55">Dies ist ein Attribut des Datentyps [[Datentyp::Text]].</text>
+      <sha1>5dmxl5let6pkprvxnglwbcfl17dvzbh</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Attribut:Rubric</title>
+    <ns>102</ns>
+    <id>47</id>
+    <revision>
+      <id>54</id>
+      <timestamp>2016-03-07T09:44:09Z</timestamp>
+      <contributor>
+        <username>Administrator</username>
+        <id>1</id>
+      </contributor>
+      <comment>Erstellte ein Attribut des Datentyps [[Has type::Text]].</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="55">Dies ist ein Attribut des Datentyps [[Datentyp::Text]].</text>
+      <sha1>5dmxl5let6pkprvxnglwbcfl17dvzbh</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Attribut:Subtitle</title>
+    <ns>102</ns>
+    <id>39</id>
+    <revision>
+      <id>43</id>
+      <timestamp>2016-03-07T09:31:04Z</timestamp>
+      <contributor>
+        <username>Administrator</username>
+        <id>1</id>
+      </contributor>
+      <comment>Erstellte ein Attribut des Datentyps [[Has type::Text]].</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="55">Dies ist ein Attribut des Datentyps [[Datentyp::Text]].</text>
+      <sha1>5dmxl5let6pkprvxnglwbcfl17dvzbh</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Attribut:Subrubric</title>
+    <ns>102</ns>
+    <id>48</id>
+    <revision>
+      <id>55</id>
+      <timestamp>2016-03-07T09:44:27Z</timestamp>
+      <contributor>
+        <username>Administrator</username>
+        <id>1</id>
+      </contributor>
+      <comment>Erstellte ein Attribut des Datentyps [[Has type::Text]].</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="55">Dies ist ein Attribut des Datentyps [[Datentyp::Text]].</text>
+      <sha1>5dmxl5let6pkprvxnglwbcfl17dvzbh</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Attribut:Title</title>
+    <ns>102</ns>
+    <id>38</id>
+    <revision>
+      <id>42</id>
+      <timestamp>2016-03-07T09:30:19Z</timestamp>
+      <contributor>
+        <username>Administrator</username>
+        <id>1</id>
+      </contributor>
+      <comment>Erstellte ein Attribut des Datentyps [[Has type::Text]].</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="55">Dies ist ein Attribut des Datentyps [[Datentyp::Text]].</text>
+      <sha1>5dmxl5let6pkprvxnglwbcfl17dvzbh</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Attribut:Year</title>
+    <ns>102</ns>
+    <id>44</id>
+    <revision>
+      <id>48</id>
+      <timestamp>2016-03-07T09:33:37Z</timestamp>
+      <contributor>
+        <username>Administrator</username>
+        <id>1</id>
+      </contributor>
+      <comment>Erstellte ein Attribut des Datentyps [[Has type::Datum]].</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="56">Dies ist ein Attribut des Datentyps [[Datentyp::Datum]].</text>
+      <sha1>2cf83ss1nonm0ixoom55igv8jp1g95s</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Attribut:Volume</title>
+    <ns>102</ns>
+    <id>42</id>
+    <revision>
+      <id>46</id>
+      <timestamp>2016-03-07T09:32:33Z</timestamp>
+      <contributor>
+        <username>Administrator</username>
+        <id>1</id>
+      </contributor>
+      <comment>Erstellte ein Attribut des Datentyps [[Has type::Zahl]].</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="55">Dies ist ein Attribut des Datentyps [[Datentyp::Zahl]].</text>
+      <sha1>0lhctdrkjwj2nf11dsyuvokxyue0efd</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Attribut:Journal</title>
+    <ns>102</ns>
+    <id>45</id>
+    <revision>
+      <id>50</id>
+      <timestamp>2016-03-07T09:36:51Z</timestamp>
+      <contributor>
+        <username>Administrator</username>
+        <id>1</id>
+      </contributor>
+      <comment>Erstellte ein Attribut des Datentyps [[Has type::Text]].</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="55">Dies ist ein Attribut des Datentyps [[Datentyp::Text]].</text>
+      <sha1>5dmxl5let6pkprvxnglwbcfl17dvzbh</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Attribut:PublicationUrl</title>
+    <ns>102</ns>
+    <id>18</id>
+    <revision>
+      <id>18</id>
+      <timestamp>2015-05-10T10:37:29Z</timestamp>
+      <contributor>
+        <username>Administrator</username>
+        <id>1</id>
+      </contributor>
+      <comment>Created a property of type [[Has type::URL]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="54">Dies ist ein Attribut des Datentyps [[Datentyp::URL]].</text>
+      <sha1>5jo3rwp7z0691ho6c7928zd7km4o52p</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Attribut:PublisherHomepage</title>
+    <ns>102</ns>
+    <id>20</id>
+    <revision>
+      <id>20</id>
+      <timestamp>2015-06-09T05:39:37Z</timestamp>
+      <contributor>
+        <username>Administrator</username>
+        <id>1</id>
+      </contributor>
+      <comment>Created a property of type [[Has type::URL]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="54">Dies ist ein Attribut des Datentyps [[Datentyp::URL]].</text>
+      <sha1>5jo3rwp7z0691ho6c7928zd7km4o52p</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Attribut:PublisherLocation</title>
+    <ns>102</ns>
+    <id>21</id>
+    <revision>
+      <id>21</id>
+      <timestamp>2015-06-09T05:40:19Z</timestamp>
+      <contributor>
+        <username>Administrator</username>
+        <id>1</id>
+      </contributor>
+      <comment>Created a property of type [[Has type::Text]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="55">Dies ist ein Attribut des Datentyps [[Datentyp::Text]].</text>
+      <sha1>5dmxl5let6pkprvxnglwbcfl17dvzbh</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Attribut:Publisher</title>
+    <ns>102</ns>
+    <id>41</id>
+    <revision>
+      <id>45</id>
+      <timestamp>2016-03-07T09:32:03Z</timestamp>
+      <contributor>
+        <username>Administrator</username>
+        <id>1</id>
+      </contributor>
+      <comment>Erstellte ein Attribut des Datentyps [[Has type::Text]].</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="55">Dies ist ein Attribut des Datentyps [[Datentyp::Text]].</text>
+      <sha1>5dmxl5let6pkprvxnglwbcfl17dvzbh</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Attribut:PublisherZipCode</title>
+    <ns>102</ns>
+    <id>23</id>
+    <revision>
+      <id>23</id>
+      <timestamp>2015-06-09T05:41:43Z</timestamp>
+      <contributor>
+        <username>Administrator</username>
+        <id>1</id>
+      </contributor>
+      <comment>Created a property of type [[Has type::Text]]</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="55">Dies ist ein Attribut des Datentyps [[Datentyp::Text]].</text>
+      <sha1>5dmxl5let6pkprvxnglwbcfl17dvzbh</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Vorlage:Article</title>
+    <ns>10</ns>
+    <id>24</id>
+    <revision>
+      <id>52</id>
+      <parentid>24</parentid>
+      <timestamp>2016-03-07T09:43:22Z</timestamp>
+      <contributor>
+        <username>Administrator</username>
+        <id>1</id>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="760">&lt;noinclude&gt;
+Dies ist die Vorlage „Article“.
+Sie sollte im folgenden Format genutzt werden:
+&lt;pre&gt;
+{{Article
+|ArticleTitle=
+|ArticlePage=
+}}
+&lt;/pre&gt;
+Klick auf „Bearbeiten“, um den Quelltext der Vorlage anzusehen.
+&lt;/noinclude&gt;&lt;includeonly&gt;{| class=&quot;wikitable&quot;
+! Titel
+| [[title::{{{title|}}}]]
+|-
+! Untertitel
+| [[subtitle::{{{subtitle|}}}]]
+|-
+! Rubrik
+| [[rubric::{{{rubric|}}}]]
+|-
+! Unterrubrik
+| [[subrubric::{{{subrubric|}}}]]
+|-
+! Publikation
+| [[journal::{{{journal|}}}]]
+|-
+! Ausgabe
+| [[volume::{{{volume|}}}]]
+|-
+! Seite
+| [[pages::{{{pages|}}}]]
+|-
+! Jahr
+| [[year::{{{year|}}}]]
+|-
+! Autor
+| [[author::{{{author|}}}]]
+|-
+! Artikellink
+| [[url::{{{url|}}}]]
+|}
+
+[[Kategorie:Artikel]]
+
+[[Page has default form::Article]]
+&lt;/includeonly&gt;</text>
+      <sha1>mw66ggnr6iibf3m4hj5fbsmvzcv0pks</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Vorlage:ArticleQuery</title>
+    <ns>10</ns>
+    <id>25</id>
+    <revision>
+      <id>92</id>
+      <parentid>91</parentid>
+      <timestamp>2016-03-07T11:39:04Z</timestamp>
+      <contributor>
+        <username>Administrator</username>
+        <id>1</id>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="839">&lt;noinclude&gt;
+Dies ist die Vorlage „ArticleQuery“.
+Sie sollte im folgenden Format genutzt werden:
+&lt;pre&gt;
+{{ArticleQuery
+|ArticleTitle=
+|PublicationTitle=
+|PublicationIssue=
+|ArticlePage=
+|ArticleYear=
+}}
+&lt;/pre&gt;
+Klick auf „Bearbeiten“, um den Quelltext der Vorlage anzusehen.
+&lt;/noinclude&gt;&lt;includeonly&gt;
+
+{{#ask:[[Kategorie:Artikel]]
+[[title::~*{{{title|}}}*]][[journal::~*{{{journal|}}}*]]
+{{#if: {{{year|}}} | [[year::{{{year|}}}]] | }}
+|?journal=Publikation
+|?title=Titel
+|?volume=Ausgabe
+|?year=Jahr
+|?pages=Seiten
+|mainlabel=Artikel
+|order=desc
+}}
+
+{{#ask:[[Kategorie:Artikel]]
+[[title::~*{{{title|}}}*]][[journal::~*{{{journal|}}}*]]
+{{#if: {{{year|}}} | [[year::{{{year|}}}]] | }}
+|?journal
+|?title
+|?volume
+|?year
+|?pages
+|?author
+|?url
+|mainlabel=Artikel
+|order=desc
+|format=bibtex
+|searchlabel=Export Bibtex
+}}
+&lt;/includeonly&gt;</text>
+      <sha1>ixfl8cp6krd2nr26646o3anhpqbn0i5</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Vorlage:Publication</title>
+    <ns>10</ns>
+    <id>26</id>
+    <revision>
+      <id>98</id>
+      <parentid>26</parentid>
+      <timestamp>2016-03-07T11:50:54Z</timestamp>
+      <contributor>
+        <username>Administrator</username>
+        <id>1</id>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="498">&lt;noinclude&gt;
+Dies ist die Vorlage „Publication“.
+Sie sollte im folgenden Format genutzt werden:
+&lt;pre&gt;
+{{Publication
+|PublicationTitle=
+}}
+&lt;/pre&gt;
+Klick auf „Bearbeiten“, um den Quelltext der Vorlage anzusehen.
+&lt;/noinclude&gt;&lt;includeonly&gt;{| class=&quot;wikitable&quot;
+! Publikation
+| [[journal::{{{journal|}}}]]
+|-
+! Internet
+|  [[PublicationUrl::{{{PublicationUrl|}}}]]
+|-
+! Verlag
+|  [[publisher::{{{publisher|}}}]]
+|}
+
+[[Kategorie:Publikation]]
+[[Page has default form::Publication]]
+&lt;/includeonly&gt;</text>
+      <sha1>ee4210zw3d8um15vbpey38msmoec0uk</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Vorlage:PublicationQuery</title>
+    <ns>10</ns>
+    <id>27</id>
+    <revision>
+      <id>97</id>
+      <parentid>27</parentid>
+      <timestamp>2016-03-07T11:49:59Z</timestamp>
+      <contributor>
+        <username>Administrator</username>
+        <id>1</id>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="446">&lt;noinclude&gt;
+Dies ist die Vorlage „PublicationQuery“.
+Sie sollte im folgenden Format genutzt werden:
+&lt;pre&gt;
+{{PublicationQuery
+|PublicationTitle=
+}}
+&lt;/pre&gt;
+Klick auf „Bearbeiten“, um den Quelltext der Vorlage anzusehen.
+&lt;/noinclude&gt;&lt;includeonly&gt;
+{{#ask:[[Kategorie:Publikation]]
+[[journal::~*{{{journal|}}}*]][[journal::~*{{{journal|}}}*]]
+|?journal=Journal
+|?publisher=Verlag
+|mainlabel=Publikation
+|order=desc
+|limit=20
+}}
+&lt;/includeonly&gt;</text>
+      <sha1>pppc92jyye3jmeet1v95y4zl4532p94</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Vorlage:Publisher</title>
+    <ns>10</ns>
+    <id>28</id>
+    <revision>
+      <id>96</id>
+      <parentid>28</parentid>
+      <timestamp>2016-03-07T11:48:32Z</timestamp>
+      <contributor>
+        <username>Administrator</username>
+        <id>1</id>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="600">&lt;noinclude&gt;
+Dies ist die Vorlage „Publisher“.
+Sie sollte im folgenden Format genutzt werden:
+&lt;pre&gt;
+{{Publisher
+|PublisherTitle=
+}}
+&lt;/pre&gt;
+Klick auf „Bearbeiten“, um den Quelltext der Vorlage anzusehen.
+&lt;/noinclude&gt;&lt;includeonly&gt;{| class=&quot;wikitable&quot;
+! Verlag
+| [[publisher::{{{publisher|}}}]]
+|-
+! Ort
+| [[PublisherLocation::{{{PublisherLocation|}}}]]
+|-
+! PLZ
+| [[PublisherZipCode::{{{PublisherZipCode|}}}]]
+|-
+! Adresse
+| [[adress::{{{adress|}}}]]
+|-
+! Homepage
+| [[PublisherHomepage::{{{PublisherHomepage|}}}]]
+|}
+[[Kategorie:Verlag]]
+[[Page has default form::Publisher]]
+&lt;/includeonly&gt;</text>
+      <sha1>f3m7d9e78kcl8z0o89iwipc128spwry</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Vorlage:TocQuery</title>
+    <ns>10</ns>
+    <id>29</id>
+    <revision>
+      <id>95</id>
+      <parentid>29</parentid>
+      <timestamp>2016-03-07T11:46:47Z</timestamp>
+      <contributor>
+        <username>Administrator</username>
+        <id>1</id>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="437">* Publikation: {{{journal|}}}
+* Jahr: {{{year|}}}
+* Ausgabe: {{{volume|}}}
+
+{{#ask:[[Kategorie:Artikel]][[journal::~*{{{journal|}}}*]][[year::{{{year|}}}]][[volume::{{{volume|}}}]]
+|?title=Titel
+|?subtitle=Untertitel
+|?rubric=Rubrik
+|?subrubric=Unterrubrik
+|?pages=Seiten
+|format=datatables
+|limit=500
+|link=all
+|headers=show
+|mainlabel=-
+|searchlabel=… weitere Ergebnisse
+|class=sortable wikitable smwtable
+|sort=pages
+|order=pages
+}}</text>
+      <sha1>ksq9q3htao43v6iey7mdgvr6xoghe3h</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>MediaWiki:Sidebar</title>
+    <ns>8</ns>
+    <id>30</id>
+    <revision>
+      <id>30</id>
+      <timestamp>2015-06-05T06:01:19Z</timestamp>
+      <contributor>
+        <username>Administrator</username>
+        <id>1</id>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="670">
+* navigation
+** mainpage|mainpage-description
+** recentchanges-url|recentchanges
+** randompage-url|randompage
+** helppage|help
+* Artikel
+** Spezial:FormEdit/Article|Neu
+** Liste_aller_Artikel|Alle Artikel
+** Spezial:RunQuery/ArticleQuery|Suche
+* Publikation
+** Spezial:FormEdit/Publication|Neu
+** Liste_aller_Publikationen|Alle Publikationen
+** Spezial:RunQuery/TocQuery|Inhaltsverzeichnis
+** Spezial:RunQuery/PublicationQuery|Suche
+* Verlag
+** Spezial:FormEdit/Publisher|Neu
+** Liste_aller_Verlage|Alle Verlage
+* Suche
+** Spezial:Suche|Volltext
+** Spezial:Suche_mittels_Attribut|Attribute
+** Spezial:Semantische_Suche|Semantische Suche
+* SEARCH
+* TOOLBOX
+* LANGUAGES</text>
+      <sha1>aplr1g3aibitwkxxo7htmr998heiby3</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Liste aller Artikel</title>
+    <ns>0</ns>
+    <id>31</id>
+    <revision>
+      <id>89</id>
+      <parentid>88</parentid>
+      <timestamp>2016-03-07T11:29:35Z</timestamp>
+      <contributor>
+        <username>Administrator</username>
+        <id>1</id>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="354">{{#ask:[[Kategorie:Artikel]]
+|?title=Titel
+|?journal=Publikation
+|?year=Jahr
+|?volume=Ausgabe
+|headers=show
+|mainlabel=Artikel
+|link=all
+|limit=500
+|class=sortable wikitable smwtable
+}}
+
+{{#ask:[[Kategorie:Artikel]]
+|?title
+|?journal
+|?year
+|?volume
+|?pages
+|?author
+|format=bibtex
+|headers=show
+|mainlabel=Artikel
+|link=all
+|searchlabel=Export BibTex
+}}</text>
+      <sha1>cqnenr0v2fximrzv8lclqajzeml2yup</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Liste aller Publikationen</title>
+    <ns>0</ns>
+    <id>33</id>
+    <revision>
+      <id>104</id>
+      <parentid>103</parentid>
+      <timestamp>2016-03-07T11:58:45Z</timestamp>
+      <contributor>
+        <username>Administrator</username>
+        <id>1</id>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="245">{{#ask:[[Kategorie:Publikation]]
+|?journal=Titel
+|?PublicationUrl=Internet
+|?PublisherTitle=Verlag
+|format=broadtable
+|link=all
+|headers=show
+|mainlabel=Link
+|sort=journal
+|searchlabel=… weitere Ergebnisse
+|class=sortable wikitable smwtable
+}}</text>
+      <sha1>0fbgn615tv2l7417cl8y8dlqktifeso</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Liste aller Verlage</title>
+    <ns>0</ns>
+    <id>34</id>
+    <revision>
+      <id>102</id>
+      <parentid>34</parentid>
+      <timestamp>2016-03-07T11:57:07Z</timestamp>
+      <contributor>
+        <username>Administrator</username>
+        <id>1</id>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="194">{{#ask:[[Kategorie:Verlag]]
+|?publisher=Titel
+|format=broadtable
+|link=all
+|headers=show
+|mainlabel=Link
+|sort=publisher
+|searchlabel=… weitere Ergebnisse
+|class=sortable wikitable smwtable
+}}</text>
+      <sha1>diimq8nzx2z7phf2i12ie194vdql3w9</sha1>
+    </revision>
+  </page>
+
+  <page>
+    <title>MediaWiki:Mainpage</title>
+    <ns>8</ns>
+    <id>34</id>
+    <revision>
+      <id>36</id>
+      <timestamp>2016-04-18T18:40:40Z</timestamp>
+      <contributor>
+        <username>Administrator</username>
+        <id>1</id>
+      </contributor>
+      <comment>Die Seite wurde neu angelegt: „Wikijournals“</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="12">Wikijournals</text>
+      <sha1>dibinj7ttt9wsa5l7zisi7hfzoddbfs</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Wikijournals</title>
+    <ns>0</ns>
+    <id>33</id>
+    <revision>
+      <id>35</id>
+      <parentid>34</parentid>
+      <timestamp>2016-04-18T18:34:15Z</timestamp>
+      <contributor>
+        <ip>79.245.173.29</ip>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="981">=== Willkommen ===
+
+Herzlich willkommen bei Wikijournals. Ziel dieses Projektes ist es, an einer zentralen Stelle semantische Metadaten zu Zeitungs- und Zeitschriftenartikeln sowie sonstigen Publikationen zu sammeln und diese anderen Anwendungen per REST API zur Verfügung zu stellen.
+
+Wer mehr über mich erfahren möchte, kann gern mein Blog unter http://krumrueck.de besuchen.
+
+=== Funktionen ===
+
+Bei Wikijournals können Metadaten zu folgenden Informationsklassen erfasst werden
+
+* Artikel
+* Publikationen
+* Verlage
+* Autoren
+
+'''Facebook'''
+
+Auf der [https://www.facebook.com/wikijournals Facebookseite] von Wikijournals findet ihr Berichte über Neuentwicklungen und weitere interessante Informationen. Ihr seid herzlich eingeladen, dort über alles, was wikijournals betriftt zu diskutieren.
+
+=== Open Source ===
+
+Wikijournals ist ein Opensource Projekt. Der komplette Quellcode kann von [https://github.com/swertschak/wikijournals-server Github] heruntergeladen werden.</text>
+      <sha1>te6og2qb60qmhp933ry3xooz1u35ugr</sha1>
+    </revision>
+  </page>
+</mediawiki>

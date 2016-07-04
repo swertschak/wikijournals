@@ -1,0 +1,21 @@
+# Permissions
+$wgGroupPermissions["*"]["edit"]=false;
+$wgGroupPermissions["*"]["createaccount"]=false;
+
+
+enableSemantics( 'localhost' );
+require_once("$IP/extensions/SemanticCompoundQueries/SemanticCompoundQueries.php");
+include_once("$IP/extensions/SemanticDrilldown/SemanticDrilldown.php");
+include_once("$IP/extensions/SemanticForms/SemanticForms.php");
+require_once("$IP/extensions/SemanticFormsInputs/SemanticFormsInputs.php");
+include_once("$IP/extensions/SemanticInternalObjects/SemanticInternalObjects.php");
+require_once("$IP/extensions/AdminLinks/AdminLinks.php");
+include_once("$IP/extensions/DataTransfer/DataTransfer.php");
+require_once("$IP/extensions/ExternalData/ExternalData.php");
+require_once("$IP/extensions/HeaderTabs/HeaderTabs.php");
+require_once("$IP/extensions/MyVariables/MyVariables.php");
+include_once("$IP/extensions/PageSchemas/PageSchemas.php");
+require_once( "$IP/extensions/ReplaceText/ReplaceText.php" );
+require_once "$IP/extensions/Variables/Variables.php";
+require_once "$IP/extensions/Widgets/Widgets.php";
+require_once "$IP/skins/foreground/foreground.php";
