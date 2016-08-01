@@ -18,13 +18,14 @@ echo Download Mediawiki
 
 cd $1
 
-wget https://releases.wikimedia.org/mediawiki/1.26/mediawiki-1.26.2.tar.gz
+#wget https://releases.wikimedia.org/mediawiki/1.26/mediawiki-1.26.2.tar.gz
+wget https://releases.wikimedia.org/mediawiki/1.27/mediawiki-1.27.0.tar.gz
 
 echo Uncompress Mediawiki into wikijournals directory
 
-tar -xvzf mediawiki-1.26.2.tar.gz
+tar -xvzf mediawiki-1.27.0.tar.gz
 
-mv mediawiki-1.26.2 $2
+mv mediawiki-1.27.0 $2
 
 echo Set rights for www-data
 
@@ -51,9 +52,11 @@ cd ..
 
 echo Install SMW Extensions
 cd extensions
-git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/SemanticCompoundQueries.git
+git clone https://github.com/SemanticMediaWiki/SemanticCompoundQueries.git
 git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/SemanticDrilldown.git
-git clone https://git.wikimedia.org/git/mediawiki/extensions/SemanticForms.git
+git clone https://phabricator.wikimedia.org/diffusion/ESFO/extension-semanticforms.git
+mv extension-semanticforms SemanticForms
+
 git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/SemanticFormsInputs.git
 git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/SemanticInternalObjects.git
 cd ..
@@ -66,12 +69,16 @@ cd extensions
 git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/AdminLinks.git
 git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/DataTransfer.git
 git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/ExternalData.git
-git clone https://git.wikimedia.org/git/mediawiki/extensions/HeaderTabs.git
-git clone https://git.wikimedia.org/git/mediawiki/extensions/MyVariables.git
+git clone https://phabricator.wikimedia.org/diffusion/EHET/extension-headertabs.git
+mv extension-headertabs HeaderTabs
+git clone https://phabricator.wikimedia.org/diffusion/EMYV/extension-myvariables.git
+mv extension-myvariables MyVariables
 git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/PageSchemas.git
 git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/ReplaceText.git
-git clone https://git.wikimedia.org/git/mediawiki/extensions/Variables.git
+git clone https://phabricator.wikimedia.org/diffusion/EVAR/extension-variables.git
+mv extension-variables Variables
 git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/Widgets.git
+
 cd Widgets
 git submodule init
 git submodule update
