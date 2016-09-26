@@ -19,13 +19,13 @@ echo Download Mediawiki
 cd $1
 
 #wget https://releases.wikimedia.org/mediawiki/1.26/mediawiki-1.26.2.tar.gz
-wget https://releases.wikimedia.org/mediawiki/1.27/mediawiki-1.27.0.tar.gz
+wget https://releases.wikimedia.org/mediawiki/1.27/mediawiki-1.27.1.tar.gz
 
 echo Uncompress Mediawiki into wikijournals directory
 
-tar -xvzf mediawiki-1.27.0.tar.gz
+tar -xvzf mediawiki-1.27.1.tar.gz
 
-mv mediawiki-1.27.0 $2
+mv mediawiki-1.27.1 $2
 
 echo Set rights for www-data
 
