@@ -19,13 +19,13 @@ echo Download Mediawiki
 cd $1
 
 #wget https://releases.wikimedia.org/mediawiki/1.26/mediawiki-1.26.2.tar.gz
-wget https://releases.wikimedia.org/mediawiki/1.27/mediawiki-1.27.1.tar.gz
+wget https://releases.wikimedia.org/mediawiki/1.28/mediawiki-1.28.2.tar.gz
 
 echo Uncompress Mediawiki into wikijournals directory
 
-tar -xvzf mediawiki-1.27.1.tar.gz
+tar -xvzf mediawiki-1.28.2.tar.gz
 
-mv mediawiki-1.27.1 $2
+mv mediawiki-1.28.2 $2
 
 echo Set rights for www-data
 
@@ -52,7 +52,7 @@ cd ..
 
 echo Install SMW Extensions
 cd extensions
-git clone https://github.com/SemanticMediaWiki/SemanticCompoundQueries.git
+#git clone https://github.com/SemanticMediaWiki/SemanticCompoundQueries.git
 git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/SemanticDrilldown.git
 git clone https://phabricator.wikimedia.org/diffusion/ESFO/extension-semanticforms.git
 mv extension-semanticforms SemanticForms
@@ -64,6 +64,8 @@ cd ..
 composer require mediawiki/maps "*"
 composer require mediawiki/semantic-maps "*"
 composer require mediawiki/semantic-result-formats "*"
+composer require mediawiki/semantic-compound-queries:~1.0
+
 
 cd extensions
 git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/AdminLinks.git
