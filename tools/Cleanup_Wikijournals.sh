@@ -21,4 +21,4 @@ mysqladmin -u$3 -p$4 drop $6
 
 echo remove mediawiki download
 
-rm $1/mediawiki-1.27.0.tar.gz
+rm $1/mediawiki-1.27.3.tar.gz

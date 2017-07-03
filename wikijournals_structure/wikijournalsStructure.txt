@@ -6,6 +6,7 @@ Form:Publisher
 Form:TocQuery
 Attribut:Adress
 Attribut:Author
+Attribut:Contenttype
 Attribut:DNBLink
 Attribut:Fulltext
 Attribut:ISSN
@@ -17,6 +18,7 @@ Attribut:PublisherHomepage
 Attribut:PublisherLocation
 Attribut:PublisherZipCode
 Attribut:Rubric
+Attribut:Status
 Attribut:Subrubric
 Attribut:Subtitle
 Attribut:Summary
@@ -37,4 +39,6 @@ Liste_aller_Publikationen
 Liste_aller_Verlage
 Wikijournals
 Kategorie:Wikijournals
+Kategorie:Artikel
+Kategorie:Publikation
  

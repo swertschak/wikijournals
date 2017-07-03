@@ -19,13 +19,14 @@ echo Download Mediawiki
 cd $1
 
 #wget https://releases.wikimedia.org/mediawiki/1.26/mediawiki-1.26.2.tar.gz
-wget https://releases.wikimedia.org/mediawiki/1.28/mediawiki-1.28.2.tar.gz
+wget https://releases.wikimedia.org/mediawiki/1.27/mediawiki-1.27.3.tar.gz
+#wget https://releases.wikimedia.org/mediawiki/1.28/mediawiki-1.28.2.tar.gz
 
 echo Uncompress Mediawiki into wikijournals directory
 
-tar -xvzf mediawiki-1.28.2.tar.gz
+tar -xvzf mediawiki-1.27.3.tar.gz
 
-mv mediawiki-1.28.2 $2
+mv mediawiki-1.27.3 $2
 
 echo Set rights for www-data
 
@@ -44,26 +45,31 @@ git clone https://github.com/thingles/foreground.git
 cd ..
 sed -i 's/$wgDefaultSkin = \"vector/$wgDefaultSkin = \"foreground/' LocalSettings.php
 
+cd extensions
+#git clone https://github.com/SemanticMediaWiki/SemanticCompoundQueries.git
+git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/SemanticDrilldown.git
+#git clone https://phabricator.wikimedia.org/diffusion/ESFO/extension-semanticforms.git
+#mv extension-semanticforms SemanticForms
+
+#git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/SemanticFormsInputs.git
+git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/PageForms
+
+cd ..
+
 echo Install Semantic Mediawiki
-composer require mediawiki/semantic-media-wiki "*.*"
+composer require mediawiki/semantic-media-wiki "2.5.2"
 cd maintenance
 php update.php
 cd ..
 
-echo Install SMW Extensions
 cd extensions
-#git clone https://github.com/SemanticMediaWiki/SemanticCompoundQueries.git
-git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/SemanticDrilldown.git
-git clone https://phabricator.wikimedia.org/diffusion/ESFO/extension-semanticforms.git
-mv extension-semanticforms SemanticForms
 
-git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/SemanticFormsInputs.git
+echo Install SMW Extensions
 git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/SemanticInternalObjects.git
 cd ..
 
-composer require mediawiki/maps "*"
-composer require mediawiki/semantic-maps "*"
-composer require mediawiki/semantic-result-formats "*"
+composer require mediawiki/maps "4.2.1"
+composer require mediawiki/semantic-result-formats "2.4.3"
 composer require mediawiki/semantic-compound-queries:~1.0
 
 
