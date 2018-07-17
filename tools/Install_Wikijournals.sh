@@ -19,14 +19,18 @@ echo Download Mediawiki
 cd $1
 
 #wget https://releases.wikimedia.org/mediawiki/1.26/mediawiki-1.26.2.tar.gz
-wget https://releases.wikimedia.org/mediawiki/1.27/mediawiki-1.27.3.tar.gz
+#wget https://releases.wikimedia.org/mediawiki/1.27/mediawiki-1.27.3.tar.gz
 #wget https://releases.wikimedia.org/mediawiki/1.28/mediawiki-1.28.2.tar.gz
+
+wget https://releases.wikimedia.org/mediawiki/1.31/mediawiki-1.31.0.tar.gz
 
 echo Uncompress Mediawiki into wikijournals directory
 
-tar -xvzf mediawiki-1.27.3.tar.gz
+#tar -xvzf mediawiki-1.27.3.tar.gz
+tar -xvzf mediawiki-1.31.0.tar.gz
 
-mv mediawiki-1.27.3 $2
+#mv mediawiki-1.27.3 $2
+mv mediawiki-1.31.0 $2
 
 echo Set rights for www-data
 
@@ -57,7 +61,7 @@ git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/PageForms
 cd ..
 
 echo Install Semantic Mediawiki
-composer require mediawiki/semantic-media-wiki "2.5.2"
+composer require mediawiki/semantic-media-wiki "2.5.6"
 cd maintenance
 php update.php
 cd ..
@@ -68,9 +72,16 @@ echo Install SMW Extensions
 git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/SemanticInternalObjects.git
 cd ..
 
-composer require mediawiki/maps "4.2.1"
-composer require mediawiki/semantic-result-formats "2.4.3"
-composer require mediawiki/semantic-compound-queries:~1.0
+echo Install Maps
+composer require mediawiki/maps "5.5"
+
+echo Install Semantic Result Formats
+#composer require mediawiki/semantic-result-formats: "~2.5.5"
+composer require mediawiki/semantic-result-formats "~2.5"
+
+
+echo Install Semantic Compound Queries
+composer require mediawiki/semantic-compound-queries:~1.1
 
 
 cd extensions
