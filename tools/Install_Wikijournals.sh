@@ -93,7 +93,7 @@ mv extension-headertabs HeaderTabs
 git clone https://phabricator.wikimedia.org/diffusion/EMYV/extension-myvariables.git
 mv extension-myvariables MyVariables
 git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/PageSchemas.git
-git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/ReplaceText.git
+#git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/ReplaceText.git
 git clone https://phabricator.wikimedia.org/diffusion/EVAR/extension-variables.git
 mv extension-variables Variables
 git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/Widgets.git
