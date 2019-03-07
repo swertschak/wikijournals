@@ -1,18 +1,25 @@
-# Permissions
+// Foreground
+wfLoadSkin( 'foreground' );
+
+// Permissions
 $wgGroupPermissions["*"]["edit"]=false;
 $wgGroupPermissions["*"]["createaccount"]=false;
 
-
+// SMW extensions
 enableSemantics( 'localhost' );
 
 wfLoadExtension( 'SemanticCompoundQueries' );
 wfLoadExtension( 'Maps' );
 wfLoadExtension( 'SemanticResultFormats' );
 wfLoadExtension( 'PageForms' );
-wfLoadExtension( 'WikiEditor' );
 
 include_once("$IP/extensions/SemanticDrilldown/SemanticDrilldown.php");
 include_once("$IP/extensions/SemanticInternalObjects/SemanticInternalObjects.php");
+
+
+// Other extensions
+wfLoadExtension( 'WikiEditor' );
+
 require_once("$IP/extensions/AdminLinks/AdminLinks.php");
 include_once("$IP/extensions/DataTransfer/DataTransfer.php");
 require_once("$IP/extensions/ExternalData/ExternalData.php");
@@ -22,7 +29,7 @@ include_once("$IP/extensions/PageSchemas/PageSchemas.php");
 require_once("$IP/extensions/ReplaceText/ReplaceText.php" );
 require_once "$IP/extensions/Variables/Variables.php";
 require_once "$IP/extensions/Widgets/Widgets.php";
-require_once "$IP/skins/foreground/foreground.php";
+
 
 // Define constants for my additional namespaces.
 define("NS_Publisher", 3000); // This MUST be even.
