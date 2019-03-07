@@ -13,11 +13,12 @@ What ist wikijournals? Wikijournals has two meanings:
 
 * Linux Server
 * Webserver Apache 2.x
-* Database Mysql 5.x
-* PHP 5.x
-* Minimum 200 MB Space
+* Database Mysql 5.5.8 or MariaDB 5.1 and higher
+* PHP 7.x
+* Minimum 500 MB Space
 * git callable per commandline (see https://git-scm.com/downloads)
 * composer callable per command line (see https://getcomposer.org/download
+* php callable per command line (see http://php.net/)
 * Existing empty Database in MySql
 
 ### Pre-Install Tasks
@@ -34,7 +35,7 @@ What ist wikijournals? Wikijournals has two meanings:
 
 * Open Terminal
 * Change to the wikijournals code directory (the cloned git repo)
-* execute command tools/Install_Wikijournals.sh as sudo with the follwing 9 parameters in this order
+* Execute command tools/Install_Wikijournals.sh as sudo with the follwing 9 parameters in this order
   * html directory
   * wikijournals directory
   * dbuser

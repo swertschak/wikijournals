@@ -34,6 +34,10 @@
       <namespace key="171" case="first-letter">Filter Diskussion</namespace>
       <namespace key="274" case="first-letter">Widget</namespace>
       <namespace key="275" case="first-letter">Widget Diskussion</namespace>
+      <namespace key="3000" case="first-letter">Publisher</namespace>
+      <namespace key="3001" case="first-letter">Publisher talk</namespace>
+      <namespace key="3002" case="first-letter">Publication</namespace>
+      <namespace key="3003" case="first-letter">Publication talk</namespace>
     </namespaces>
   </siteinfo>
   <page>
@@ -899,7 +903,7 @@ Klick auf „Bearbeiten“, um den Quelltext der Vorlage anzusehen.
     <revision>
       <id>2092</id>
       <parentid>31</parentid>
-      <timestamp>2016-11-19T13:51:34Z</timestamp>
+      <timestamp>2019-03-06T11:49:46Z</timestamp>
       <contributor>
         <username>Administrator</username>
         <id>1</id>
@@ -936,6 +940,7 @@ Klick auf „Bearbeiten“, um den Quelltext der Vorlage anzusehen.
 |}
 
 [[Page has default form::Publication]]
+[[Kategorie:Publikation]]
 &lt;/includeonly&gt;</text>
       <sha1>2pe1edbs1kf0oubk71plf4xlj4ekb13</sha1>
     </revision>
@@ -1016,6 +1021,7 @@ Klick auf „Bearbeiten“, um den Quelltext der Vorlage anzusehen.
 |}
 
 [[Page has default form::Publisher]]
+[[Kategorie:Verlag]]
 &lt;/includeonly&gt;</text>
       <sha1>0h3egabv72y8v61nexd0qs1k5c4naxf</sha1>
     </revision>

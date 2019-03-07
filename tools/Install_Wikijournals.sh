@@ -56,7 +56,7 @@ git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/PageForms
 cd ..
 
 echo Install Semantic Mediawiki
-composer require mediawiki/semantic-media-wiki "2.5.6"
+composer require mediawiki/semantic-media-wiki "3.0.1"
 cd maintenance
 php update.php
 cd ..
@@ -68,15 +68,15 @@ git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/SemanticInternal
 cd ..
 
 echo Install Maps
-composer require mediawiki/maps "5.5"
+composer require mediawiki/maps "7.1.0"
 
 echo Install Semantic Result Formats
 #composer require mediawiki/semantic-result-formats: "~2.5.5"
-composer require mediawiki/semantic-result-formats "~2.5"
+composer require mediawiki/semantic-result-formats "3.0.0*"
 
 
 echo Install Semantic Compound Queries
-composer require mediawiki/semantic-compound-queries:~1.1
+composer require mediawiki/semantic-compound-queries "2.0.0"
 
 
 cd extensions

@@ -4,7 +4,13 @@ $wgGroupPermissions["*"]["createaccount"]=false;
 
 
 enableSemantics( 'localhost' );
-require_once("$IP/extensions/SemanticCompoundQueries/SemanticCompoundQueries.php");
+
+wfLoadExtension( 'SemanticCompoundQueries' );
+wfLoadExtension( 'Maps' );
+wfLoadExtension( 'SemanticResultFormats' );
+wfLoadExtension( 'PageForms' );
+wfLoadExtension( 'WikiEditor' );
+
 include_once("$IP/extensions/SemanticDrilldown/SemanticDrilldown.php");
 include_once("$IP/extensions/SemanticInternalObjects/SemanticInternalObjects.php");
 require_once("$IP/extensions/AdminLinks/AdminLinks.php");
@@ -18,6 +24,18 @@ require_once "$IP/extensions/Variables/Variables.php";
 require_once "$IP/extensions/Widgets/Widgets.php";
 require_once "$IP/skins/foreground/foreground.php";
 
-wfLoadExtension( 'PageForms' );
+// Define constants for my additional namespaces.
+define("NS_Publisher", 3000); // This MUST be even.
+define("NS_Publisher_TALK", 3001); // This MUST be the following odd integer.
+define("NS_Publication", 3002);
+define("NS_Publication_TALK", 3003);
 
-wfLoadExtension( 'WikiEditor' );
+// Add namespaces.
+$wgExtraNamespaces[NS_Publisher] = "Publisher";
+$wgExtraNamespaces[NS_Publisher_TALK] = "Publisher_talk"; // Note underscores in the namespace name.
+$wgExtraNamespaces[NS_Publication] = "Publication";
+$wgExtraNamespaces[NS_Publication_TALK] = "Publication_talk"; // Note underscores in the namespace name.
+
+// Activate namespaces for smw
+$smwgNamespacesWithSemanticLinks[NS_Publisher] = true;
+$smwgNamespacesWithSemanticLinks[NS_Publication] = true;
