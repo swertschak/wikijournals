@@ -50,12 +50,7 @@ cd ..
 sed -i 's/$wgDefaultSkin = \"vector/$wgDefaultSkin = \"foreground/' LocalSettings.php
 
 cd extensions
-#git clone https://github.com/SemanticMediaWiki/SemanticCompoundQueries.git
 git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/SemanticDrilldown.git
-#git clone https://phabricator.wikimedia.org/diffusion/ESFO/extension-semanticforms.git
-#mv extension-semanticforms SemanticForms
-
-#git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/SemanticFormsInputs.git
 git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/PageForms
 
 cd ..
