@@ -18,10 +18,6 @@ echo Download Mediawiki
 
 cd $1
 
-#wget https://releases.wikimedia.org/mediawiki/1.26/mediawiki-1.26.2.tar.gz
-#wget https://releases.wikimedia.org/mediawiki/1.27/mediawiki-1.27.3.tar.gz
-#wget https://releases.wikimedia.org/mediawiki/1.28/mediawiki-1.28.2.tar.gz
-
 wget https://releases.wikimedia.org/mediawiki/1.31/mediawiki-1.31.0.tar.gz
 
 echo Uncompress Mediawiki into wikijournals directory
@@ -72,7 +68,7 @@ composer require mediawiki/maps "7.1.0"
 
 echo Install Semantic Result Formats
 #composer require mediawiki/semantic-result-formats: "~2.5.5"
-composer require mediawiki/semantic-result-formats "3.0.0*"
+composer require mediawiki/semantic-result-formats "3.0.0"
 
 
 echo Install Semantic Compound Queries
