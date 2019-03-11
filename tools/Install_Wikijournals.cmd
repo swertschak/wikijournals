@@ -32,6 +32,7 @@ curl %MEDIAWIKIURL% --output wikijournals.tar.gz
 echo Uncompress Mediawiki into wikijournals directory
 tar -xvzf wikijournals.tar.gz
 ren %MEDIAWIKIDIR% %2
+del wikijournals.tar.gz
 
 echo Install Mediawiki
 cd %1/%2/maintenance
