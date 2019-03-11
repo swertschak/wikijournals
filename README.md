@@ -11,15 +11,29 @@ What ist wikijournals? Wikijournals has two meanings:
 
 ### Requirements
 
-* Linux Server
-* Webserver Apache 2.x
-* Database Mysql 5.5.8 or MariaDB 5.1 and higher
+__Operating System (OS)__
+* Linux
+* Windows 10 or higher
+
+__Webserver__
+* Apache 2.x
+
+__Database__
+* MySQL 5.8 or higher
+* MariaDB 5.1 or higher
+* Existing empty Database in MySQL/MariaDB
+
+__PHP__
 * PHP 7.x
+
+__Harddisk Space__
 * Minimum 500 MB Space
+
+__Commandline Tools__
 * git callable per commandline (see https://git-scm.com/downloads)
 * composer callable per command line (see https://getcomposer.org/download
 * php callable per command line (see http://php.net/)
-* Existing empty Database in MySql
+
 
 ### Pre-Install Tasks
 
@@ -32,6 +46,8 @@ What ist wikijournals? Wikijournals has two meanings:
 
 
 ### Installation per Script
+
+__Installation under Linux__
 
 * Open Terminal
 * Change to the wikijournals code directory (the cloned git repo)
@@ -46,6 +62,22 @@ What ist wikijournals? Wikijournals has two meanings:
   * wikipwd
   * wikiname
 * Sample: sudo sh tools/Install_Wikijournals.sh /var/www/html wikijournals_3 wikiuser mypassword localhost wikijournals_3 Administrator myadminpasswd wikijournals
+
+__Installation under Windows__
+
+* Open Terminal => Windows-Taste+R and then "cmd"
+* Change to the wikijournals code directory (the cloned git repo)
+* Execute command tools/Install_Wikijournals.cmd with the follwing 9 parameters in this order
+  * html directory
+  * wikijournals directory
+  * dbuser
+  * dbpass
+  * dbserver
+  * dbname
+  * wikiuser
+  * wikipwd
+  * wikiname
+* Sample: Install_Wikijournals c:\xampp\htdocs wikijournals_3 wikiuser mypassword localhost wikijournals_3 Administrator myadminpasswd wikijournals
 
 
 ### Manual Installation
@@ -88,7 +120,6 @@ __Install further Mediawiki Extensions__
 * [Header Tabs](https://www.mediawiki.org/wiki/Extension:Header_Tabs)
 * [MyVariables](https://www.mediawiki.org/wiki/Extension:MyVariables)
 * [Page Schemas](https://www.mediawiki.org/wiki/Extension:Page_Schemas)
-* [Replace Text](https://www.mediawiki.org/wiki/Extension:Replace_Text)
 * [Variables](https://www.mediawiki.org/wiki/Extension:Variables)
 * [Widgets](https://www.mediawiki.org/wiki/Extension:Widgets)
 

@@ -1,8 +1,42 @@
 echo off
-echo Install Mediawiki
 
-cd maintenance
-php install.php --dbuser=<db_user> --dbpass=<db_pwd> --dbserver=<db_server> --dbname=<db_name> --dbtype=mysql --installdbpass=<db_pwd> --installdbuser=<db_user> --lang=de --pass=<wiki_pwd> --scriptpath=/<wiki_dir>  <wiki_name> <wiki_user>
+echo Check command line parameter
+echo html directory: %1
+set htmldir=%1
+echo wikijournals directory: %2
+set wikidir=%2
+echo dbuser: %3
+set dbuser=%3
+echo dbpass: %4
+set dbpass=%4
+echo dbserver: %5
+set dbserver=%5
+echo dbname: %6
+set dbname=%6
+echo wikiuser: %7
+set wikiuser=%7
+echo wikipwd: %8
+set wikipwd=%8
+echo wikiname: %9
+set wikiname=%9
+
+set PROJECTDIR="%cd%"
+
+echo Download Mediawiki
+set MEDIAWIKIVERSION=1.31.1
+set MEDIAWIKIURL=https://releases.wikimedia.org/mediawiki/1.31/mediawiki-%MEDIAWIKIVERSION%.tar.gz
+set MEDIAWIKIDIR=mediawiki-%MEDIAWIKIVERSION%
+cd %1
+curl %MEDIAWIKIURL% --output wikijournals.tar.gz
+
+echo Uncompress Mediawiki into wikijournals directory
+tar -xvzf wikijournals.tar.gz
+ren %MEDIAWIKIDIR% %2
+
+echo Install Mediawiki
+cd %1/%2/maintenance
+call php install.php --dbuser=%dbuser% --dbpass=%dbpass% --dbserver=%dbserver% --dbname=%dbname% --dbtype=mysql --installdbpass=%dbpass% --installdbuser=%dbuser% --lang=da --pass=%wikipwd% --scriptpath=/%wikidir%  %wikiname% %wikiuser%
+call "%PROJECTDIR%/tools/fnr.exe" --cl --dir "%1\%2" --fileMask "LocalSettings.php" --excludeFileMask "*.dll, *.exe" --includeSubDirectories --find "$wgLanguageCode = ""en"";" --replace "$wgLanguageCode = ""de"";"
 cd ..
 
 echo Install foreground
@@ -10,20 +44,26 @@ cd skins
 git clone https://github.com/thingles/foreground.git
 cd ..
 
+cd extensions
+git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/SemanticDrilldown.git
+git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/PageForms
+
+cd ..
 
 echo Install Semantic Mediawiki
 call composer require mediawiki/semantic-media-wiki "3.0.1"
+
+echo Zwschenupdate
 cd maintenance
-php update.php
+call php update.php
+cd ..
+
+cd extensions
 
 echo Install SMW Extensions
-cd ..\extensions
-
-git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/SemanticDrilldown.git
-git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/PageForms
 git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/SemanticInternalObjects.git
-
 cd ..
+
 echo Install Maps
 call composer require mediawiki/maps "7.1.0"
 
@@ -50,10 +90,16 @@ cd Widgets
 git submodule init
 git submodule update
 
-cd ..
-copy /b LocalSettings.php+configExtensions.txt LocalSettings.php
+echo Update LocalSetting.php
+cd ..\..
+type LocalSettings.php %PROJECTDIR%\configExtensions.txt > LocalSettings.bak
+del LocalSettings.php
+ren LocalSettings.bak LocalSettings.php
+call "%PROJECTDIR%/tools/fnr.exe" --cl --dir "%1\%2" --fileMask "LocalSettings.php" --excludeFileMask "*.dll, *.exe" --includeSubDirectories --find "$wgDefaultSkin = ""vector"";" --replace "$wgDefaultSkin = ""foreground"";"
 cd maintenance
-php update.php
+call php update.php
 
 echo Install Wikijournals Structure
-php importDump.php < $PROJECTDIR/wikijournals_structure/wikijournalsStructure.xml
+call php importDump.php < %PROJECTDIR%/wikijournals_structure/wikijournalsStructure.xml
+
+cd %PROJECTDIR%
