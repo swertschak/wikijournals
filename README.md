@@ -61,8 +61,10 @@ __Installation under Linux__
   * wikiuser
   * wikipwd
   * wikiname
-* Sample: sudo sh tools/Install_Wikijournals.sh /var/www/html wikijournals_3 wikiuser mypassword localhost wikijournals_3 Administrator myadminpasswd wikijournals
-
+* Sample
+  ```bash
+  sudo sh tools/Install_Wikijournals.sh /var/www/html wikijournals_3 wikiuser mypassword localhost wikijournals_3 Administrator myadminpasswd wikijournals
+  ```
 __Installation under Windows__
 
 * Open Terminal => Windows-Taste+R and then "cmd"
@@ -77,8 +79,10 @@ __Installation under Windows__
   * wikiuser
   * wikipwd
   * wikiname
-* Sample: Install_Wikijournals c:\xampp\htdocs wikijournals_3 wikiuser mypassword localhost wikijournals_3 Administrator myadminpasswd wikijournals
-
+* Sample: 
+  ```bat
+  Install_Wikijournals c:\xampp\htdocs wikijournals_3 wikiuser mypassword localhost wikijournals_3 Administrator myadminpasswd wikijournals
+  ```
 
 ### Manual Installation
 
@@ -88,12 +92,18 @@ __Install Mediawiki__
 * Uncompress the mediawiki archive
 * Upload the uncompressed archive to the web server f.i. /htdocs/wikijournals
 * Ensure access to the web directory including sub-directories for the web user (f.i. www-data)
-* For example per chown command: sudo chown -cR www-data:www-data wikijournals
+* For example per chown command
+  ```bash
+  sudo chown -cR www-data:www-data wikijournals
+  ```
 * Perform normal mediawiki installation (see https://www.mediawiki.org/wiki/Manual:Installation_guide)
 
 __Install Foreground Theme__
 
-* Download Foreground (git clone https://github.com/thingles/foreground.git)
+* Download Foreground
+  ```bash
+  git clone https://github.com/thingles/foreground.git
+  ```
 * Install Foreground, see https://github.com/thingles/foreground/
 * Set Foreground as Default Skin (see https://www.mediawiki.org/wiki/Manual:$wgDefaultSkin)
 
@@ -129,7 +139,10 @@ __Install Wikijournals Structure__
 * Change to wikijournals directory on the web server
 * Change to maintenance directory
 * Copy wikijournalsStructure.xml from the wikijournals_structure directory to the maintenance dir
-* execute php importDump.php < wikijournalsStructure.xml
+* execute Mediawiki Import Script (importDump.php)
+  ```bash
+  php importDump.php < wikijournalsStructure.xml
+  ```
 
 
 
