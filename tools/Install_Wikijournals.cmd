@@ -36,7 +36,7 @@ del wikijournals.tar.gz
 
 echo Install Mediawiki
 cd %1/%2/maintenance
-call php install.php --dbuser=%dbuser% --dbpass=%dbpass% --dbserver=%dbserver% --dbname=%dbname% --dbtype=mysql --installdbpass=%dbpass% --installdbuser=%dbuser% --lang=da --pass=%wikipwd% --scriptpath=/%wikidir%  %wikiname% %wikiuser%
+call php install.php --dbuser=%dbuser% --dbpass=%dbpass% --dbserver=%dbserver% --dbname=%dbname% --dbtype=mysql --installdbpass=%dbpass% --installdbuser=%dbuser% --lang=de --pass=%wikipwd% --scriptpath=/%wikidir%  %wikiname% %wikiuser%
 call "%PROJECTDIR%/tools/fnr.exe" --cl --dir "%1\%2" --fileMask "LocalSettings.php" --excludeFileMask "*.dll, *.exe" --includeSubDirectories --find "$wgLanguageCode = ""en"";" --replace "$wgLanguageCode = ""de"";"
 cd ..
 
