@@ -23,10 +23,14 @@ set wikiname=%9
 set PROJECTDIR="%cd%"
 
 echo Download Mediawiki
-set MEDIAWIKIVERSION=1.31.1
-set MEDIAWIKIURL=https://releases.wikimedia.org/mediawiki/1.31/mediawiki-%MEDIAWIKIVERSION%.tar.gz
-set MEDIAWIKIDIR=mediawiki-%MEDIAWIKIVERSION%
+set MEDIAWIKIVERSION=1.32
+set MEDIAWIKIMINORVERSION=0
+set MEDIAWIKIURL=https://releases.wikimedia.org/mediawiki/%MEDIAWIKIVERSION%/mediawiki-%MEDIAWIKIVERSION%.%MEDIAWIKIMINORVERSION%.tar.gz
+set MEDIAWIKIDIR=mediawiki-%MEDIAWIKIVERSION%.%MEDIAWIKIMINORVERSION%
 cd %1
+
+echo %MEDIAWIKIURL%
+
 curl %MEDIAWIKIURL% --output wikijournals.tar.gz
 
 echo Uncompress Mediawiki into wikijournals directory
