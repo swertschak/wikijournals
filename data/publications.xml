@@ -1,0 +1,101 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.10/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.10/ http://www.mediawiki.org/xml/export-0.10.xsd" version="0.10" xml:lang="de">
+  <siteinfo>
+    <sitename>Wikijournals</sitename>
+    <dbname>wikijournals4</dbname>
+    <base>http://localhost/wikijournals4/index.php/Hauptseite</base>
+    <generator>MediaWiki 1.32.0</generator>
+    <case>first-letter</case>
+    <namespaces>
+      <namespace key="-2" case="first-letter">Medium</namespace>
+      <namespace key="-1" case="first-letter">Spezial</namespace>
+      <namespace key="0" case="first-letter" />
+      <namespace key="1" case="first-letter">Diskussion</namespace>
+      <namespace key="2" case="first-letter">Benutzer</namespace>
+      <namespace key="3" case="first-letter">Benutzer Diskussion</namespace>
+      <namespace key="4" case="first-letter">Wikijournals</namespace>
+      <namespace key="5" case="first-letter">Wikijournals Diskussion</namespace>
+      <namespace key="6" case="first-letter">Datei</namespace>
+      <namespace key="7" case="first-letter">Datei Diskussion</namespace>
+      <namespace key="8" case="first-letter">MediaWiki</namespace>
+      <namespace key="9" case="first-letter">MediaWiki Diskussion</namespace>
+      <namespace key="10" case="first-letter">Vorlage</namespace>
+      <namespace key="11" case="first-letter">Vorlage Diskussion</namespace>
+      <namespace key="12" case="first-letter">Hilfe</namespace>
+      <namespace key="13" case="first-letter">Hilfe Diskussion</namespace>
+      <namespace key="14" case="first-letter">Kategorie</namespace>
+      <namespace key="15" case="first-letter">Kategorie Diskussion</namespace>
+      <namespace key="102" case="first-letter">Attribut</namespace>
+      <namespace key="103" case="first-letter">Attribut Diskussion</namespace>
+      <namespace key="106" case="first-letter">Formular</namespace>
+      <namespace key="107" case="first-letter">Formular Diskussion</namespace>
+      <namespace key="108" case="first-letter">Konzept</namespace>
+      <namespace key="109" case="first-letter">Konzept Diskussion</namespace>
+      <namespace key="112" case="first-letter">SMW/Schema</namespace>
+      <namespace key="113" case="first-letter">SMW/Schema Diskussion</namespace>
+      <namespace key="114" case="first-letter">Rule</namespace>
+      <namespace key="115" case="first-letter">Rule talk</namespace>
+      <namespace key="274" case="first-letter">Widget</namespace>
+      <namespace key="275" case="first-letter">Widget Diskussion</namespace>
+      <namespace key="420" case="first-letter">GeoJson</namespace>
+      <namespace key="421" case="first-letter">GeoJson talk</namespace>
+      <namespace key="3000" case="first-letter">Publisher</namespace>
+      <namespace key="3001" case="first-letter">Publisher talk</namespace>
+      <namespace key="3002" case="first-letter">Publication</namespace>
+      <namespace key="3003" case="first-letter">Publication talk</namespace>
+    </namespaces>
+  </siteinfo>
+  <page>
+    <title>Publication:CT-Magazin</title>
+    <ns>3002</ns>
+    <id>53</id>
+    <revision>
+      <id>57</id>
+      <parentid>56</parentid>
+      <timestamp>2019-03-17T10:20:21Z</timestamp>
+      <contributor>
+        <username>Administrator</username>
+        <id>1</id>
+      </contributor>
+      <minor/>
+      <comment>Administrator verschob die Seite [[Publication:Db57d3ac-abdd-46c4-b2bb-8342196a25b1]] nach [[Publication:CT-Magazin]], ohne dabei eine Weiterleitung anzulegen</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="246">{{Publication
+|journal=c't Magazin für Computertechnik
+|PublicationUrl=https://www.heise.de/ct/
+|publisher=Heise Medien GmbH &amp; Co. KG
+|ISSN=0724-8679
+|DNBLink=http://d-nb.info/010420517
+|WikipediaLink=https://de.wikipedia.org/wiki/C%E2%80%99t
+}}</text>
+      <sha1>2j9u3xtjlstrq67fgtx7u91eviu704y</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Publication:T3N</title>
+    <ns>3002</ns>
+    <id>55</id>
+    <revision>
+      <id>61</id>
+      <parentid>60</parentid>
+      <timestamp>2019-03-17T10:24:13Z</timestamp>
+      <contributor>
+        <username>Administrator</username>
+        <id>1</id>
+      </contributor>
+      <minor/>
+      <comment>Administrator verschob die Seite [[88420f7d-11a8-44ec-af0a-77c805a373ac]] nach [[Publication:T3N]], ohne dabei eine Weiterleitung anzulegen</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="233">{{Publication
+|journal=T3N : digital pioneers
+|PublicationUrl=https://t3n.de/
+|publisher=yeebase media GmbH
+|ISSN=1861-339X
+|DNBLink=http://d-nb.info/976424118
+|WikipediaLink=https://de.wikipedia.org/wiki/Yeebase_media#t3n_Magazin
+}}</text>
+      <sha1>o3bodiuttp0z7de01ybgdlhf6fgrfiv</sha1>
+    </revision>
+  </page>
+</mediawiki>

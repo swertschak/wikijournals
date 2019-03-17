@@ -1,0 +1,99 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.10/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.10/ http://www.mediawiki.org/xml/export-0.10.xsd" version="0.10" xml:lang="de">
+  <siteinfo>
+    <sitename>Wikijournals</sitename>
+    <dbname>wikijournals4</dbname>
+    <base>http://localhost/wikijournals4/index.php/Hauptseite</base>
+    <generator>MediaWiki 1.32.0</generator>
+    <case>first-letter</case>
+    <namespaces>
+      <namespace key="-2" case="first-letter">Medium</namespace>
+      <namespace key="-1" case="first-letter">Spezial</namespace>
+      <namespace key="0" case="first-letter" />
+      <namespace key="1" case="first-letter">Diskussion</namespace>
+      <namespace key="2" case="first-letter">Benutzer</namespace>
+      <namespace key="3" case="first-letter">Benutzer Diskussion</namespace>
+      <namespace key="4" case="first-letter">Wikijournals</namespace>
+      <namespace key="5" case="first-letter">Wikijournals Diskussion</namespace>
+      <namespace key="6" case="first-letter">Datei</namespace>
+      <namespace key="7" case="first-letter">Datei Diskussion</namespace>
+      <namespace key="8" case="first-letter">MediaWiki</namespace>
+      <namespace key="9" case="first-letter">MediaWiki Diskussion</namespace>
+      <namespace key="10" case="first-letter">Vorlage</namespace>
+      <namespace key="11" case="first-letter">Vorlage Diskussion</namespace>
+      <namespace key="12" case="first-letter">Hilfe</namespace>
+      <namespace key="13" case="first-letter">Hilfe Diskussion</namespace>
+      <namespace key="14" case="first-letter">Kategorie</namespace>
+      <namespace key="15" case="first-letter">Kategorie Diskussion</namespace>
+      <namespace key="102" case="first-letter">Attribut</namespace>
+      <namespace key="103" case="first-letter">Attribut Diskussion</namespace>
+      <namespace key="106" case="first-letter">Formular</namespace>
+      <namespace key="107" case="first-letter">Formular Diskussion</namespace>
+      <namespace key="108" case="first-letter">Konzept</namespace>
+      <namespace key="109" case="first-letter">Konzept Diskussion</namespace>
+      <namespace key="112" case="first-letter">SMW/Schema</namespace>
+      <namespace key="113" case="first-letter">SMW/Schema Diskussion</namespace>
+      <namespace key="114" case="first-letter">Rule</namespace>
+      <namespace key="115" case="first-letter">Rule talk</namespace>
+      <namespace key="274" case="first-letter">Widget</namespace>
+      <namespace key="275" case="first-letter">Widget Diskussion</namespace>
+      <namespace key="420" case="first-letter">GeoJson</namespace>
+      <namespace key="421" case="first-letter">GeoJson talk</namespace>
+      <namespace key="3000" case="first-letter">Publisher</namespace>
+      <namespace key="3001" case="first-letter">Publisher talk</namespace>
+      <namespace key="3002" case="first-letter">Publication</namespace>
+      <namespace key="3003" case="first-letter">Publication talk</namespace>
+    </namespaces>
+  </siteinfo>
+  <page>
+    <title>Publisher:Heise Verlag</title>
+    <ns>3000</ns>
+    <id>52</id>
+    <revision>
+      <id>54</id>
+      <parentid>53</parentid>
+      <timestamp>2019-03-17T10:17:10Z</timestamp>
+      <contributor>
+        <username>Administrator</username>
+        <id>1</id>
+      </contributor>
+      <minor/>
+      <comment>Administrator verschob die Seite [[0621ee66-91f1-430a-a109-6e14ff4377db]] nach [[Publisher:Heise Verlag]], ohne dabei eine Weiterleitung anzulegen</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="176">{{Publisher
+|publisher=Heise Medien GmbH &amp; Co. KG
+|PublisherLocation=Hannover
+|PublisherZipCode=30625
+|adress=Karl-Wiechert-Allee 10
+|PublisherHomepage=https://www.heise.de/
+}}</text>Publisher:Yeebase
+      <sha1>7m3fa2no6h9al95k88g6p7cc124jxpd</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Publisher:Yeebase</title>
+    <ns>3000</ns>
+    <id>54</id>
+    <revision>
+      <id>59</id>
+      <parentid>58</parentid>
+      <timestamp>2019-03-17T10:22:31Z</timestamp>
+      <contributor>
+        <username>Administrator</username>
+        <id>1</id>
+      </contributor>
+      <minor/>
+      <comment>Administrator verschob die Seite [[6cb994a7-fe02-49b5-8dcd-036752d31792]] nach [[Publisher:Yeebase]], ohne dabei eine Weiterleitung anzulegen</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="159">{{Publisher
+|publisher=yeebase media GmbH
+|PublisherLocation=Hannover
+|PublisherZipCode=30161
+|adress=Kriegerstr. 40
+|PublisherHomepage=https://yeebase.com/
+}}</text>
+      <sha1>dsvrdgs3ewpv8qx6hc6wy3ho33zhbi8</sha1>
+    </revision>
+  </page>
+</mediawiki>
