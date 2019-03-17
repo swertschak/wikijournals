@@ -18,8 +18,8 @@ echo Download Mediawiki
 
 cd $1
 
-mwmain=1.31
-mwminor=1
+mwmain=1.32
+mwminor=0
 
 wget https://releases.wikimedia.org/mediawiki/$mwmain/mediawiki-$mwmain.$mwminor.tar.gz
 
@@ -28,6 +28,8 @@ echo Uncompress Mediawiki into wikijournals directory
 tar -xvzf mediawiki-$mwmain.$mwminor.tar.gz
 
 mv mediawiki-$mwmain.$mwminor $2
+
+rm mediawiki-$mwmain.$mwminor.tar.gz
 
 echo Set rights for www-data
 
@@ -68,9 +70,7 @@ echo Install Maps
 composer require mediawiki/maps "7.1.0"
 
 echo Install Semantic Result Formats
-#composer require mediawiki/semantic-result-formats: "~2.5.5"
 composer require mediawiki/semantic-result-formats "3.0.0"
-
 
 echo Install Semantic Compound Queries
 composer require mediawiki/semantic-compound-queries "2.0.0"
@@ -85,7 +85,6 @@ mv extension-headertabs HeaderTabs
 git clone https://phabricator.wikimedia.org/diffusion/EMYV/extension-myvariables.git
 mv extension-myvariables MyVariables
 git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/PageSchemas.git
-#git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/ReplaceText.git
 git clone https://phabricator.wikimedia.org/diffusion/EVAR/extension-variables.git
 mv extension-variables Variables
 git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/Widgets.git
@@ -106,4 +105,15 @@ php update.php
 echo Install Wikijournals Structure
 
 php importDump.php < $PROJECTDIR/wikijournals_structure/wikijournalsStructure.xml
+
+echo Import Metadata Publisher
+
+php importDump.php < $PROJECTDIR/data/publisher.xml
+
+echo Import Metadat Publications
+
+php importDump.php < $PROJECTDIR/data/publications.xml
+
+cd $PROJECTDIR
+
 

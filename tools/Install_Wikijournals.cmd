@@ -107,4 +107,12 @@ call php update.php
 echo Install Wikijournals Structure
 call php importDump.php < %PROJECTDIR%/wikijournals_structure/wikijournalsStructure.xml
 
+echo Import Metadata Publisher
+
+call php importDump.php < %PROJECTDIR%/data/publisher.xml
+
+echo Import Metadat Publications
+
+call php importDump.php < %PROJECTDIR%/data/publications.xml
+
 cd %PROJECTDIR%
