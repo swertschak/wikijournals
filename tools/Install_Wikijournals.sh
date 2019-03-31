@@ -97,9 +97,37 @@ git submodule update
 echo Update LocalSetting.php
 cd $1/$2
 
-cat $PROJECTDIR/configExtensions.txt >> LocalSettings.php
+cat $PROJECTDIR/config/configExtensions.txt >> LocalSettings.php
 sed -i 's/$wgLanguageCode = \"en/$wgLanguageCode = \"de/' LocalSettings.php
 cd maintenance
+php update.php
+
+echo Install Translation Extensions
+
+cd $1/$2/extensions
+
+git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/Babel.git
+git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/cldr.git
+git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/CleanChanges.git
+#git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/LocalisationUpdate.git
+git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/Translate.git
+git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/UniversalLanguageSelector.git
+
+#for ext in Babel cldr CleanChanges LocalisationUpdate Translate UniversalLanguageSelector
+# do
+#   if [ ! -d "$ext" ]
+#   then
+#     git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/$ext.git
+#   fi
+   #cd $ext; git fetch --tags; git checkout 2019.01; cd ..
+# done
+
+cd $1/$2
+
+cat $PROJECTDIR/config/configTranslation.txt >> LocalSettings.php
+
+cd $1/$2/maintenance
+
 php update.php
 
 echo Install Wikijournals Structure

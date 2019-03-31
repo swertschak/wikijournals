@@ -97,12 +97,35 @@ git submodule update
 
 echo Update LocalSetting.php
 cd ..\..
-type LocalSettings.php %PROJECTDIR%\configExtensions.txt > LocalSettings.bak
+type LocalSettings.php %PROJECTDIR%\config\configExtensions.txt > LocalSettings.bak
 del LocalSettings.php
 ren LocalSettings.bak LocalSettings.php
 call "%PROJECTDIR%/tools/fnr.exe" --cl --dir "%1\%2" --fileMask "LocalSettings.php" --excludeFileMask "*.dll, *.exe" --includeSubDirectories --find "$wgDefaultSkin = ""vector"";" --replace "$wgDefaultSkin = ""foreground"";"
 cd maintenance
 call php update.php
+
+
+echo Install Translation Extensions
+
+cd $1/$2/extensions
+
+git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/Babel.git
+git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/cldr.git
+git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/CleanChanges.git
+git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/Translate.git
+git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/UniversalLanguageSelector.git
+
+cd $1/$2
+
+type LocalSettings.php %PROJECTDIR%\config\configTranslation.txt > LocalSettings.bak
+del LocalSettings.php
+ren LocalSettings.bak LocalSettings.php
+
+cd $1/$2/maintenance
+
+call php update.php
+
+
 
 echo Install Wikijournals Structure
 call php importDump.php < %PROJECTDIR%/wikijournals_structure/wikijournalsStructure.xml
