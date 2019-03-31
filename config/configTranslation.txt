@@ -1,4 +1,4 @@
-// Transaltion configuration
+// Translation configuration
 
 wfLoadExtension( 'Babel' );
 

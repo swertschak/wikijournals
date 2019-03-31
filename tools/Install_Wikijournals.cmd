@@ -107,7 +107,7 @@ call php update.php
 
 echo Install Translation Extensions
 
-cd $1/$2/extensions
+cd %1/%2/extensions
 
 git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/Babel.git
 git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/cldr.git
@@ -115,13 +115,13 @@ git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/CleanChanges.git
 git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/Translate.git
 git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/UniversalLanguageSelector.git
 
-cd $1/$2
+cd %1/%2
 
 type LocalSettings.php %PROJECTDIR%\config\configTranslation.txt > LocalSettings.bak
 del LocalSettings.php
 ren LocalSettings.bak LocalSettings.php
 
-cd $1/$2/maintenance
+cd %1/%2/maintenance
 
 call php update.php
 
