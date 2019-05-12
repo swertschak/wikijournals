@@ -22,52 +22,69 @@ if [ $# -ne 9 ];
     then
         echo "illegal number of parameters"
         ((++check))
-    else echo "correct number of parameters"
-fi
-
-echo check parameter html directory
-
-if [ -d $1 ]
-then
-    echo "Directory $1 exists"
     else
-        echo "Directory $1 do not exists"
-        ((++check))
+        echo "correct number of parameters"
+
+        echo check parameter html directory
+
+        if [ -d $1 ]
+
+        then
+            echo "Directory $1 exists"
+
+            echo check database parameter
+
+            RESULT=`mysql -u$3 -p$4 -e "SHOW DATABASES" | grep $6`
+
+            if [ "$RESULT" == "$6" ]; then
+
+            echo "Database $6 exist"
+
+            else
+            echo "Database $6 does not exist"
+            ((++check))
+
+            fi
+
+        else
+            echo "Directory $1 do not exists"
+            ((++check))
+        fi
 
 
 fi
 
-echo check database parameter
 
- RESULT=`mysql -u$3 -p$4 -e "SHOW DATABASES" | grep $6`
- if [ "$RESULT" == "$6" ]; then
-    echo "Database $6 exist"
+echo "Check Result: " $check
 
- else
-    echo "Database $6 does not exist"
-    ((++check))
- fi
-
-
-echo $check
 
 if [ $check -eq 0 ]
-then echo "Check successful"
-else echo "Check failed"
+then
+    echo "Check successful"
+    echo Download Mediawiki
+
+    cd $1
+    mwmain=1.32
+    mwminor=0
+    wget https://releases.wikimedia.org/mediawiki/$mwmain/mediawiki-$mwmain.$mwminor.tar.gz
+
+    if [[ $? -ne 0 ]]; then
+    echo "wget failed"
+    exit 1;
+
+    else
+        echo "Download Mediawiki Version $mwmain.$mwminor successful"
+        echo Uncompress Mediawiki into wikijournals directory
+        tar -xvzf mediawiki-$mwmain.$mwminor.tar.gz
+        mv mediawiki-$mwmain.$mwminor $2
+        rm mediawiki-$mwmain.$mwminor.tar.gz
+
+
+
+    fi
+
+else
+    echo "Check failed"
 fi
 
-#RESULT = mysql -u$3 -p$4 $6 -e exit
 
-#RESULT = 'mysql -u$3 -p$4 $6'
-
-#echo
-#echo $?
-
-
-
-#if [ $? == 0 ]
-#then echo "Database connection could be established"
-#else echo "Database connection could not be establiesh, Check Database name, user name and password"
-#fi
-
-#echo $?
