@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo Check command line parameter
+echo List line parameter
 
 echo html directory: $1
 echo wikijournals directory: $2
@@ -112,15 +112,6 @@ git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/CleanChanges.git
 #git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/LocalisationUpdate.git
 git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/Translate.git
 git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/UniversalLanguageSelector.git
-
-#for ext in Babel cldr CleanChanges LocalisationUpdate Translate UniversalLanguageSelector
-# do
-#   if [ ! -d "$ext" ]
-#   then
-#     git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/$ext.git
-#   fi
-   #cd $ext; git fetch --tags; git checkout 2019.01; cd ..
-# done
 
 cd $1/$2
 
