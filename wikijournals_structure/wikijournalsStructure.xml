@@ -3,7 +3,7 @@
     <sitename>Wikijournals</sitename>
     <dbname>wikijournals</dbname>
     <base>https://wikijournals.info/Wikijournals</base>
-    <generator>MediaWiki 1.27.1</generator>
+    <generator>MediaWiki 1.28.2</generator>
     <case>first-letter</case>
     <namespaces>
       <namespace key="-2" case="first-letter">Medium</namespace>
@@ -34,10 +34,6 @@
       <namespace key="171" case="first-letter">Filter Diskussion</namespace>
       <namespace key="274" case="first-letter">Widget</namespace>
       <namespace key="275" case="first-letter">Widget Diskussion</namespace>
-      <namespace key="3000" case="first-letter">Publisher</namespace>
-      <namespace key="3001" case="first-letter">Publisher talk</namespace>
-      <namespace key="3002" case="first-letter">Publication</namespace>
-      <namespace key="3003" case="first-letter">Publication talk</namespace>
     </namespaces>
   </siteinfo>
   <page>
@@ -334,6 +330,24 @@ Sofern bereits eine Seite mit diesem Namen vorhanden ist, wirst du automatisch z
 
 [[Kategorie:Attributes]]</text>
       <sha1>pgr5sueaj6hmfsmgwta3fv29tqmbe0e</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Attribut:Articleid</title>
+    <ns>102</ns>
+    <id>5661</id>
+    <revision>
+      <id>6227</id>
+      <timestamp>2017-08-06T20:05:42Z</timestamp>
+      <contributor>
+        <username>Administrator</username>
+        <id>1</id>
+      </contributor>
+      <comment>Erstellte ein Attribut des Datentyps [[Has type::Text]].</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="55">Dies ist ein Attribut des Datentyps [[Datentyp::Text]].</text>
+      <sha1>5dmxl5let6pkprvxnglwbcfl17dvzbh</sha1>
     </revision>
   </page>
   <page>
@@ -751,16 +765,16 @@ Die möglichen Werte für dieses Attribut sind:
     <ns>10</ns>
     <id>29</id>
     <revision>
-      <id>5788</id>
-      <parentid>5786</parentid>
-      <timestamp>2017-06-12T16:22:21Z</timestamp>
+      <id>6335</id>
+      <parentid>5788</parentid>
+      <timestamp>2017-08-06T20:14:06Z</timestamp>
       <contributor>
         <username>Administrator</username>
         <id>1</id>
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="1172">&lt;noinclude&gt;
+      <text xml:space="preserve" bytes="1214">&lt;noinclude&gt;
 Dies ist die Vorlage „Article“.
 Sie sollte im folgenden Format genutzt werden:
 &lt;pre&gt;
@@ -773,6 +787,9 @@ Klick auf „Bearbeiten“, um den Quelltext der Vorlage anzusehen.
 &lt;/noinclude&gt;&lt;includeonly&gt;{| class=&quot;wikitable&quot;
 ! Titel
 | [[title::{{{title|}}}]]
+|-
+! ID
+| [[articleid::{{{articleid|}}}]]
 |-
 ! Untertitel
 | [[subtitle::{{{subtitle|}}}]]
@@ -832,7 +849,7 @@ Klick auf „Bearbeiten“, um den Quelltext der Vorlage anzusehen.
 [[Kategorie:Artikel]]
 
 &lt;/includeonly&gt;</text>
-      <sha1>q3ushyiju0ds5ft03xpg8kydze9gfw4</sha1>
+      <sha1>jdxebodb4vjbherckanejo0fs3yjqrg</sha1>
     </revision>
   </page>
   <page>
@@ -903,7 +920,7 @@ Klick auf „Bearbeiten“, um den Quelltext der Vorlage anzusehen.
     <revision>
       <id>2092</id>
       <parentid>31</parentid>
-      <timestamp>2019-03-06T11:49:46Z</timestamp>
+      <timestamp>2016-11-19T13:51:34Z</timestamp>
       <contributor>
         <username>Administrator</username>
         <id>1</id>
@@ -940,7 +957,6 @@ Klick auf „Bearbeiten“, um den Quelltext der Vorlage anzusehen.
 |}
 
 [[Page has default form::Publication]]
-[[Kategorie:Publikation]]
 &lt;/includeonly&gt;</text>
       <sha1>2pe1edbs1kf0oubk71plf4xlj4ekb13</sha1>
     </revision>
@@ -1021,7 +1037,6 @@ Klick auf „Bearbeiten“, um den Quelltext der Vorlage anzusehen.
 |}
 
 [[Page has default form::Publisher]]
-[[Kategorie:Verlag]]
 &lt;/includeonly&gt;</text>
       <sha1>0h3egabv72y8v61nexd0qs1k5c4naxf</sha1>
     </revision>
@@ -1207,64 +1222,33 @@ Klick auf „Bearbeiten“, um den Quelltext der Vorlage anzusehen.
     <ns>0</ns>
     <id>42</id>
     <revision>
-      <id>1834</id>
-      <parentid>1830</parentid>
-      <timestamp>2016-11-07T11:17:59Z</timestamp>
+      <id>17929</id>
+      <parentid>17919</parentid>
+      <timestamp>2017-10-31T14:57:50Z</timestamp>
       <contributor>
         <username>Administrator</username>
         <id>1</id>
       </contributor>
       <minor/>
-      <comment>Schützte „[[Wikijournals]]“ ([Bearbeiten=Nur Administratoren erlauben] (unbeschränkt) [Verschieben=Nur Administratoren erlauben] (unbeschränkt))</comment>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="1693">{{#seo:
+      <text xml:space="preserve" bytes="926">{{#seo:
 |title=Crowdsourcing for journal articles
 |titlemode=append
 |keywords=articles, artikel, journals, zeitschriften, publisher, verlage, autoren, authors, semantic web
 |description=Wikijournals ist eine semantische Suchmaschine für Metadaten von Zeitschriftenartikel
 }}
-=== Willkommen ===
-
-Herzlich willkommen bei Wikijournals. Ziel dieses Projektes ist es, an einer zentralen Stelle semantische Metadaten zu Zeitungs- und Zeitschriftenartikeln sowie sonstigen Publikationen zu sammeln und diese anderen Anwendungen per REST API zur Verfügung zu stellen.
-
-Wer mehr über mich erfahren möchte, kann gern mein Blog unter http://krumrueck.de besuchen.
-
-&lt;br/&gt;
-
-=== Funktionen ===
-
-Bei Wikijournals können Metadaten zu folgenden Informationsklassen erfasst werden
-
-* Artikel
-* Publikationen
-* Verlage
-* Autoren
-
-&lt;br/&gt;
-
-=== Social Media ===
-
-'''Facebook'''
-
-Auf der [https://www.facebook.com/wikijournals Facebookseite] von Wikijournals findet ihr Berichte über Neuentwicklungen und weitere interessante Informationen. Ihr seid herzlich eingeladen, dort über alles, was wikijournals betriftt zu diskutieren.
-
-'''Projektblog'''
-
-Alle Infos zum Projekt finden sich im Projektblog unter http://myjournals.de/
-
-&lt;br/&gt;
-
-=== Mitmachen ===
-
-Wikijournals ist ein offenes Projekt, bei dem jeder mitmachen kann. Wer selbst Artikel eintragen oder bereits existierende verbessern möchte, sollte dazu zuerst den [[Wikijournals:Redaktionsleitfaden | Redaktionsleitfaden]] lesen. Dort findet ihr alle wichtigen Informationen
-
-&lt;br/&gt;
-
-=== Open Source ===
-
-Wikijournals ist ein Opensource Projekt. Der komplette Quellcode kann von [https://github.com/swertschak/wikijournals Github] heruntergeladen werden.</text>
-      <sha1>5tode6ppg3wk9y8k1nv1pf5zeta523u</sha1>
+Herzlich willkommen bei Wikijournals. Ziel dieses Projektes ist es, eine Metasuchmaschine für Zeitschriftenartikel aufzubauen. Viele Zeitschriften haben ein eigenes Artikelarchiv.
+&lt;br /&gt;
+&lt;br /&gt;
+Der Aufbau dieser Suchmaschinen ist aber nicht einheitlich. Es werden unterschiedliche Systeme und Formate verwendet. Eine übergreifende, verlagsunabhängige Suche ist nicht möglich. Wikijournals möchte dies ändern.
+&lt;br /&gt;
+&lt;br /&gt;
+Ausführlichere Informationen zu wikijournals findet ihr [[Wikijournals:Über_Wikijournals|hier]],
+&lt;br /&gt;
+&lt;br /&gt;
+Wer gleich im Archiv stöbern möchte, kommt über [[Spezial:Suche|diesen Link]]  direkt zur Suchfunktion.</text>
+      <sha1>2nzazx15v2k4fnyd3sm1e2yvibo3fo1</sha1>
     </revision>
   </page>
   <page>

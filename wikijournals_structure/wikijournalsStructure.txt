@@ -5,6 +5,7 @@ Form:PublicationQuery
 Form:Publisher
 Form:TocQuery
 Attribut:Adress
+Attribut:Articleid
 Attribut:Author
 Attribut:Contenttype
 Attribut:DNBLink
