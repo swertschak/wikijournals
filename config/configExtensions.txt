@@ -27,7 +27,7 @@ require_once("$IP/extensions/HeaderTabs/HeaderTabs.php");
 require_once("$IP/extensions/MyVariables/MyVariables.php");
 include_once("$IP/extensions/PageSchemas/PageSchemas.php");
 require_once("$IP/extensions/ReplaceText/ReplaceText.php" );
-require_once "$IP/extensions/Variables/Variables.php";
+wfLoadExtension( 'Variables' );
 require_once "$IP/extensions/Widgets/Widgets.php";
 
 

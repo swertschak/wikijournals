@@ -18,7 +18,7 @@ echo Download Mediawiki
 
 cd $1
 
-mwmain=1.32
+mwmain=1.33
 mwminor=0
 
 wget https://releases.wikimedia.org/mediawiki/$mwmain/mediawiki-$mwmain.$mwminor.tar.gz
@@ -55,7 +55,7 @@ git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/PageForms
 cd ..
 
 echo Install Semantic Mediawiki
-composer require mediawiki/semantic-media-wiki "3.0.1"
+composer require mediawiki/semantic-media-wiki "3.0.2"
 cd maintenance
 php update.php
 cd ..
@@ -67,10 +67,10 @@ git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/SemanticInternal
 cd ..
 
 echo Install Maps
-composer require mediawiki/maps "7.1.0"
+composer require mediawiki/maps "7.4.0"
 
 echo Install Semantic Result Formats
-composer require mediawiki/semantic-result-formats "3.0.0"
+composer require mediawiki/semantic-result-formats "3.0.1"
 
 echo Install Semantic Compound Queries
 composer require mediawiki/semantic-compound-queries "2.0.0"
@@ -80,13 +80,13 @@ cd extensions
 git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/AdminLinks.git
 git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/DataTransfer.git
 git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/ExternalData.git
-git clone https://phabricator.wikimedia.org/diffusion/EHET/extension-headertabs.git
-mv extension-headertabs HeaderTabs
-git clone https://phabricator.wikimedia.org/diffusion/EMYV/extension-myvariables.git
-mv extension-myvariables MyVariables
+git clone https://phabricator.wikimedia.org/diffusion/EHET/extension-headertabs.git HeaderTabs
+#mv extension-headertabs HeaderTabs
+git clone https://phabricator.wikimedia.org/diffusion/EMYV/extension-myvariables.git MyVariables
+#mv extension-myvariables MyVariables
 git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/PageSchemas.git
-git clone https://phabricator.wikimedia.org/diffusion/EVAR/extension-variables.git
-mv extension-variables Variables
+git clone https://phabricator.wikimedia.org/diffusion/EVAR/extension-variables.git Variables
+#mv extension-variables Variables
 git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/Widgets.git
 
 cd Widgets
@@ -109,7 +109,6 @@ cd $1/$2/extensions
 git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/Babel.git
 git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/cldr.git
 git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/CleanChanges.git
-#git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/LocalisationUpdate.git
 git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/Translate.git
 git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/UniversalLanguageSelector.git
 
@@ -130,7 +129,7 @@ echo Import Metadata Publisher
 
 php importDump.php < $PROJECTDIR/data/publisher.xml
 
-echo Import Metadat Publications
+echo Import Metadata Publications
 
 php importDump.php < $PROJECTDIR/data/publications.xml
 

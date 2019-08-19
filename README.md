@@ -24,7 +24,10 @@ __Database__
 * Existing empty Database in MySQL/MariaDB
 
 __PHP__
-* PHP 7.x
+* PHP 7.1 or higher
+
+**Libraries**
+* ImageMagick
 
 __Harddisk Space__
 * Minimum 500 MB Space
