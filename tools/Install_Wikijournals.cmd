@@ -56,7 +56,7 @@ git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/PageForms
 cd ..
 
 echo Install Semantic Mediawiki
-call composer require mediawiki/semantic-media-wiki "3.0.1"
+call composer require mediawiki/semantic-media-wiki "3.0.2"
 
 echo Zwschenupdate
 cd maintenance
@@ -70,10 +70,10 @@ git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/SemanticInternal
 cd ..
 
 echo Install Maps
-call composer require mediawiki/maps "7.1.0"
+call composer require mediawiki/maps "7.4.0"
 
 echo Install Semantic Result Formats
-call composer require mediawiki/semantic-result-formats "3.0.0"
+call composer require mediawiki/semantic-result-formats "3.0.1"
 
 echo Install Semantic Compound Queries
 call composer require mediawiki/semantic-compound-queries "2.0.0"
@@ -82,13 +82,10 @@ cd extensions
 git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/AdminLinks.git
 git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/DataTransfer.git
 git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/ExternalData.git
-git clone https://phabricator.wikimedia.org/diffusion/EHET/extension-headertabs.git
-ren extension-headertabs HeaderTabs
-git clone https://phabricator.wikimedia.org/diffusion/EMYV/extension-myvariables.git
-ren extension-myvariables MyVariables
+git clone https://phabricator.wikimedia.org/diffusion/EHET/extension-headertabs.git HeaderTabs
+git clone https://phabricator.wikimedia.org/diffusion/EMYV/extension-myvariables.git MyVariables
 git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/PageSchemas.git
-git clone https://phabricator.wikimedia.org/diffusion/EVAR/extension-variables.git
-ren extension-variables Variables
+git clone https://phabricator.wikimedia.org/diffusion/EVAR/extension-variables.git Variables
 git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/Widgets.git
 
 cd Widgets

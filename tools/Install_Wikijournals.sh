@@ -81,12 +81,9 @@ git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/AdminLinks.git
 git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/DataTransfer.git
 git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/ExternalData.git
 git clone https://phabricator.wikimedia.org/diffusion/EHET/extension-headertabs.git HeaderTabs
-#mv extension-headertabs HeaderTabs
 git clone https://phabricator.wikimedia.org/diffusion/EMYV/extension-myvariables.git MyVariables
-#mv extension-myvariables MyVariables
 git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/PageSchemas.git
 git clone https://phabricator.wikimedia.org/diffusion/EVAR/extension-variables.git Variables
-#mv extension-variables Variables
 git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/Widgets.git
 
 cd Widgets
