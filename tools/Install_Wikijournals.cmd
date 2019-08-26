@@ -41,7 +41,7 @@ del wikijournals.tar.gz
 echo Install Mediawiki
 cd %1/%2/maintenance
 call php install.php --dbuser=%dbuser% --dbpass=%dbpass% --dbserver=%dbserver% --dbname=%dbname% --dbtype=mysql --installdbpass=%dbpass% --installdbuser=%dbuser% --lang=de --pass=%wikipwd% --scriptpath=/%wikidir%  %wikiname% %wikiuser%
-call "%PROJECTDIR%/tools/fnr.exe" --cl --dir "%1\%2" --fileMask "LocalSettings.php" --excludeFileMask "*.dll, *.exe" --includeSubDirectories --find "$wgLanguageCode = ""en"";" --replace "$wgLanguageCode = ""de"";"
+call "%PROJECTDIR%\tools\fnr.exe" --cl --dir "%1\%2" --fileMask "LocalSettings.php" --excludeFileMask "*.dll, *.exe" --includeSubDirectories --find "$wgLanguageCode = ""en"";" --replace "$wgLanguageCode = ""de"";"
 cd ..
 
 echo Install foreground
@@ -97,7 +97,7 @@ cd ..\..
 type LocalSettings.php %PROJECTDIR%\config\configExtensions.txt > LocalSettings.bak
 del LocalSettings.php
 ren LocalSettings.bak LocalSettings.php
-call "%PROJECTDIR%/tools/fnr.exe" --cl --dir "%1\%2" --fileMask "LocalSettings.php" --excludeFileMask "*.dll, *.exe" --includeSubDirectories --find "$wgDefaultSkin = ""vector"";" --replace "$wgDefaultSkin = ""foreground"";"
+call "%PROJECTDIR%\tools\fnr.exe" --cl --dir "%1\%2" --fileMask "LocalSettings.php" --excludeFileMask "*.dll, *.exe" --includeSubDirectories --find "$wgDefaultSkin = ""vector"";" --replace "$wgDefaultSkin = ""foreground"";"
 cd maintenance
 call php update.php
 
@@ -112,27 +112,27 @@ git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/CleanChanges.git
 git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/Translate.git
 git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/UniversalLanguageSelector.git
 
-cd %1/%2
+cd %1\%2
 
 type LocalSettings.php %PROJECTDIR%\config\configTranslation.txt > LocalSettings.bak
 del LocalSettings.php
 ren LocalSettings.bak LocalSettings.php
 
-cd %1/%2/maintenance
+cd %1\%2\maintenance
 
 call php update.php
 
 
 
 echo Install Wikijournals Structure
-call php importDump.php < %PROJECTDIR%/wikijournals_structure/wikijournalsStructure.xml
+call php importDump.php < %PROJECTDIR%\wikijournals_structure\wikijournalsStructure.xml
 
 echo Import Metadata Publisher
 
-call php importDump.php < %PROJECTDIR%/data/publisher.xml
+call php importDump.php < %PROJECTDIR%\data\publisher.xml
 
 echo Import Metadat Publications
 
-call php importDump.php < %PROJECTDIR%/data/publications.xml
+call php importDump.php < %PROJECTDIR%\data\publications.xml
 
 cd %PROJECTDIR%
