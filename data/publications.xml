@@ -1,9 +1,9 @@
 <mediawiki xmlns="http://www.mediawiki.org/xml/export-0.10/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.10/ http://www.mediawiki.org/xml/export-0.10.xsd" version="0.10" xml:lang="de">
   <siteinfo>
-    <sitename>Wikijournals</sitename>
-    <dbname>wikijournals4</dbname>
-    <base>http://localhost/wikijournals4/index.php/Hauptseite</base>
-    <generator>MediaWiki 1.32.0</generator>
+    <sitename>wikijournals</sitename>
+    <dbname>wikijournals</dbname>
+    <base>http://localhost/wikijournals/index.php/Hauptseite</base>
+    <generator>MediaWiki 1.33.0</generator>
     <case>first-letter</case>
     <namespaces>
       <namespace key="-2" case="first-letter">Medium</namespace>
@@ -12,8 +12,8 @@
       <namespace key="1" case="first-letter">Diskussion</namespace>
       <namespace key="2" case="first-letter">Benutzer</namespace>
       <namespace key="3" case="first-letter">Benutzer Diskussion</namespace>
-      <namespace key="4" case="first-letter">Wikijournals</namespace>
-      <namespace key="5" case="first-letter">Wikijournals Diskussion</namespace>
+      <namespace key="4" case="first-letter">wikijournals</namespace>
+      <namespace key="5" case="first-letter">wikijournals Diskussion</namespace>
       <namespace key="6" case="first-letter">Datei</namespace>
       <namespace key="7" case="first-letter">Datei Diskussion</namespace>
       <namespace key="8" case="first-letter">MediaWiki</namespace>
@@ -38,6 +38,8 @@
       <namespace key="275" case="first-letter">Widget Diskussion</namespace>
       <namespace key="420" case="first-letter">GeoJson</namespace>
       <namespace key="421" case="first-letter">GeoJson talk</namespace>
+      <namespace key="1198" case="first-letter">Translations</namespace>
+      <namespace key="1199" case="first-letter">Translations talk</namespace>
       <namespace key="3000" case="first-letter">Publisher</namespace>
       <namespace key="3001" case="first-letter">Publisher talk</namespace>
       <namespace key="3002" case="first-letter">Publication</namespace>
@@ -47,55 +49,53 @@
   <page>
     <title>Publication:CT-Magazin</title>
     <ns>3002</ns>
-    <id>53</id>
+    <id>55</id>
     <revision>
-      <id>57</id>
-      <parentid>56</parentid>
-      <timestamp>2019-03-17T10:20:21Z</timestamp>
+      <id>63</id>
+      <parentid>55</parentid>
+      <timestamp>2019-09-09T11:16:38Z</timestamp>
       <contributor>
-        <username>Administrator</username>
+        <username>Wikiadmin</username>
         <id>1</id>
       </contributor>
-      <minor/>
-      <comment>Administrator verschob die Seite [[Publication:Db57d3ac-abdd-46c4-b2bb-8342196a25b1]] nach [[Publication:CT-Magazin]], ohne dabei eine Weiterleitung anzulegen</comment>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="246">{{Publication
+      <text xml:space="preserve" bytes="263">{{Publication
 |journal=c't Magazin für Computertechnik
 |PublicationUrl=https://www.heise.de/ct/
 |publisher=Heise Medien GmbH &amp; Co. KG
 |ISSN=0724-8679
 |DNBLink=http://d-nb.info/010420517
 |WikipediaLink=https://de.wikipedia.org/wiki/C%E2%80%99t
+|status=Geprüft
 }}</text>
-      <sha1>2j9u3xtjlstrq67fgtx7u91eviu704y</sha1>
+      <sha1>ayvmrr2llhfluif6pa4xkdglem5wve0</sha1>
     </revision>
   </page>
   <page>
     <title>Publication:T3N</title>
     <ns>3002</ns>
-    <id>55</id>
+    <id>56</id>
     <revision>
-      <id>61</id>
-      <parentid>60</parentid>
-      <timestamp>2019-03-17T10:24:13Z</timestamp>
+      <id>62</id>
+      <parentid>56</parentid>
+      <timestamp>2019-09-09T11:16:17Z</timestamp>
       <contributor>
-        <username>Administrator</username>
+        <username>Wikiadmin</username>
         <id>1</id>
       </contributor>
-      <minor/>
-      <comment>Administrator verschob die Seite [[88420f7d-11a8-44ec-af0a-77c805a373ac]] nach [[Publication:T3N]], ohne dabei eine Weiterleitung anzulegen</comment>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="233">{{Publication
+      <text xml:space="preserve" bytes="250">{{Publication
 |journal=T3N : digital pioneers
 |PublicationUrl=https://t3n.de/
 |publisher=yeebase media GmbH
 |ISSN=1861-339X
 |DNBLink=http://d-nb.info/976424118
 |WikipediaLink=https://de.wikipedia.org/wiki/Yeebase_media#t3n_Magazin
+|status=Geprüft
 }}</text>
-      <sha1>o3bodiuttp0z7de01ybgdlhf6fgrfiv</sha1>
+      <sha1>dbfuyb3jdspeu4miq6u6m56v5lozcgs</sha1>
     </revision>
   </page>
 </mediawiki>

@@ -1,9 +1,9 @@
 <mediawiki xmlns="http://www.mediawiki.org/xml/export-0.10/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.10/ http://www.mediawiki.org/xml/export-0.10.xsd" version="0.10" xml:lang="de">
   <siteinfo>
-    <sitename>Wikijournals</sitename>
+    <sitename>wikijournals</sitename>
     <dbname>wikijournals</dbname>
-    <base>https://wikijournals.info/Wikijournals</base>
-    <generator>MediaWiki 1.28.2</generator>
+    <base>http://localhost/wikijournals/index.php/Hauptseite</base>
+    <generator>MediaWiki 1.33.0</generator>
     <case>first-letter</case>
     <namespaces>
       <namespace key="-2" case="first-letter">Medium</namespace>
@@ -12,8 +12,8 @@
       <namespace key="1" case="first-letter">Diskussion</namespace>
       <namespace key="2" case="first-letter">Benutzer</namespace>
       <namespace key="3" case="first-letter">Benutzer Diskussion</namespace>
-      <namespace key="4" case="first-letter">Wikijournals</namespace>
-      <namespace key="5" case="first-letter">Wikijournals Diskussion</namespace>
+      <namespace key="4" case="first-letter">wikijournals</namespace>
+      <namespace key="5" case="first-letter">wikijournals Diskussion</namespace>
       <namespace key="6" case="first-letter">Datei</namespace>
       <namespace key="7" case="first-letter">Datei Diskussion</namespace>
       <namespace key="8" case="first-letter">MediaWiki</namespace>
@@ -30,23 +30,32 @@
       <namespace key="107" case="first-letter">Formular Diskussion</namespace>
       <namespace key="108" case="first-letter">Konzept</namespace>
       <namespace key="109" case="first-letter">Konzept Diskussion</namespace>
-      <namespace key="170" case="first-letter">Filter</namespace>
-      <namespace key="171" case="first-letter">Filter Diskussion</namespace>
+      <namespace key="112" case="first-letter">SMW/Schema</namespace>
+      <namespace key="113" case="first-letter">SMW/Schema Diskussion</namespace>
+      <namespace key="114" case="first-letter">Rule</namespace>
+      <namespace key="115" case="first-letter">Rule talk</namespace>
       <namespace key="274" case="first-letter">Widget</namespace>
       <namespace key="275" case="first-letter">Widget Diskussion</namespace>
+      <namespace key="420" case="first-letter">GeoJson</namespace>
+      <namespace key="421" case="first-letter">GeoJson talk</namespace>
+      <namespace key="1198" case="first-letter">Translations</namespace>
+      <namespace key="1199" case="first-letter">Translations talk</namespace>
+      <namespace key="3000" case="first-letter">Publisher</namespace>
+      <namespace key="3001" case="first-letter">Publisher talk</namespace>
+      <namespace key="3002" case="first-letter">Publication</namespace>
+      <namespace key="3003" case="first-letter">Publication talk</namespace>
     </namespaces>
   </siteinfo>
   <page>
     <title>Formular:Article</title>
     <ns>106</ns>
-    <id>2</id>
+    <id>9</id>
     <revision>
-      <id>2651</id>
-      <parentid>1549</parentid>
+      <id>9</id>
       <timestamp>2016-12-18T17:20:09Z</timestamp>
       <contributor>
-        <username>Administrator</username>
-        <id>1</id>
+        <username>imported&gt;Administrator</username>
+        <id />
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
@@ -60,9 +69,9 @@ Sofern bereits eine Seite mit diesem Namen vorhanden ist, wirst du automatisch z
 
 &lt;/noinclude&gt;&lt;includeonly&gt;
 {{{info|page name={{UUID}} |create title=Neuer Artikel |edit title=Artikel bearbeiten }}}
-&lt;div id=&quot;wikiPreview&quot; style=&quot;display: none; padding-bottom: 25px; margin-bottom: 25px; border-bottom: 1px solid #AAAAAA;&quot;&gt;&lt;/div&gt;
+&lt;div id="wikiPreview" style="display: none; padding-bottom: 25px; margin-bottom: 25px; border-bottom: 1px solid #AAAAAA;"&gt;&lt;/div&gt;
 {{{for template|Article}}}
-{| class=&quot;formtable&quot;
+{| class="formtable"
 | Titel  {{{field|title|mandatory}}}
 |-
 | Untertitel {{{field|subtitle|autogrow}}}
@@ -102,14 +111,13 @@ Sofern bereits eine Seite mit diesem Namen vorhanden ist, wirst du automatisch z
   <page>
     <title>Formular:ArticleQuery</title>
     <ns>106</ns>
-    <id>3</id>
+    <id>10</id>
     <revision>
-      <id>2654</id>
-      <parentid>3</parentid>
+      <id>10</id>
       <timestamp>2016-12-19T11:18:41Z</timestamp>
       <contributor>
-        <username>Administrator</username>
-        <id>1</id>
+        <username>imported&gt;Administrator</username>
+        <id />
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
@@ -123,9 +131,9 @@ Sofern bereits eine Seite mit diesem Namen vorhanden ist, wirst du automatisch z
 
 &lt;/noinclude&gt;&lt;includeonly&gt;
 {{{info|query title=Suche Artikel}}}
-&lt;div id=&quot;wikiPreview&quot; style=&quot;display: none; padding-bottom: 25px; margin-bottom: 25px; border-bottom: 1px solid #AAAAAA;&quot;&gt;&lt;/div&gt;
+&lt;div id="wikiPreview" style="display: none; padding-bottom: 25px; margin-bottom: 25px; border-bottom: 1px solid #AAAAAA;"&gt;&lt;/div&gt;
 {{{for template|ArticleQuery}}}
-{| class=&quot;formtable&quot;
+{| class="formtable"
 | Titel {{{field|title}}}
 |-
 | Publikation {{{field|journal|input type=combobox|property=journal|existing values only}}}
@@ -143,18 +151,18 @@ Sofern bereits eine Seite mit diesem Namen vorhanden ist, wirst du automatisch z
   <page>
     <title>Formular:Publication</title>
     <ns>106</ns>
-    <id>4</id>
+    <id>11</id>
     <revision>
-      <id>2652</id>
-      <parentid>4</parentid>
-      <timestamp>2016-12-18T17:21:50Z</timestamp>
+      <id>60</id>
+      <parentid>11</parentid>
+      <timestamp>2019-09-09T10:50:50Z</timestamp>
       <contributor>
-        <username>Administrator</username>
+        <username>Wikiadmin</username>
         <id>1</id>
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="1047">&lt;noinclude&gt;
+      <text xml:space="preserve" bytes="1117">&lt;noinclude&gt;
 Dies ist das Formular „Publication“.
 Um eine Seite mit diesem Formular zu erstellen, gib den Seitennamen unten in das Eingabefeld ein.
 Sofern bereits eine Seite mit diesem Namen vorhanden ist, wirst du automatisch zum Formular für das Bearbeiten der Seite weitergeleitet.
@@ -164,9 +172,9 @@ Sofern bereits eine Seite mit diesem Namen vorhanden ist, wirst du automatisch z
 
 &lt;/noinclude&gt;&lt;includeonly&gt;
 {{{info|page name={{UUID}} }}}
-&lt;div id=&quot;wikiPreview&quot; style=&quot;display: none; padding-bottom: 25px; margin-bottom: 25px; border-bottom: 1px solid #AAAAAA;&quot;&gt;&lt;/div&gt;
+&lt;div id="wikiPreview" style="display: none; padding-bottom: 25px; margin-bottom: 25px; border-bottom: 1px solid #AAAAAA;"&gt;&lt;/div&gt;
 {{{for template|Publication}}}
-{| class=&quot;formtable&quot;
+{| class="formtable"
 | Titel {{{field|journal|rows=2}}}
 |-
 | Internet {{{field|PublicationUrl}}}
@@ -178,6 +186,8 @@ Sofern bereits eine Seite mit diesem Namen vorhanden ist, wirst du automatisch z
 | DNB-Link {{{field|DNBLink|input type=url}}}
 |-
 | Wikipedia {{{field|WikipediaLink|input type=url}}}
+|-
+| Status {{{field|status|property=status|default=Neu|restricted}}}
 |}
 {{{end template}}}
 
@@ -185,20 +195,19 @@ Sofern bereits eine Seite mit diesem Namen vorhanden ist, wirst du automatisch z
 
 {{{standard input|save|label=Speichern}}} {{{standard input|cancel}}}
 &lt;/includeonly&gt;</text>
-      <sha1>r9zrlonqeyglzttm4om2i8yojvs1ade</sha1>
+      <sha1>dm67v9q6wgrdpsxwnqm03negvmcwukq</sha1>
     </revision>
   </page>
   <page>
     <title>Formular:PublicationQuery</title>
     <ns>106</ns>
-    <id>5</id>
+    <id>12</id>
     <revision>
-      <id>2655</id>
-      <parentid>5</parentid>
+      <id>12</id>
       <timestamp>2016-12-19T11:19:56Z</timestamp>
       <contributor>
-        <username>Administrator</username>
-        <id>1</id>
+        <username>imported&gt;Administrator</username>
+        <id />
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
@@ -212,9 +221,9 @@ Sofern bereits eine Seite mit diesem Namen vorhanden ist, wirst du automatisch z
 
 &lt;/noinclude&gt;&lt;includeonly&gt;
 {{{info|query title=Suche Publikation}}}
-&lt;div id=&quot;wikiPreview&quot; style=&quot;display: none; padding-bottom: 25px; margin-bottom: 25px; border-bottom: 1px solid #AAAAAA;&quot;&gt;&lt;/div&gt;
+&lt;div id="wikiPreview" style="display: none; padding-bottom: 25px; margin-bottom: 25px; border-bottom: 1px solid #AAAAAA;"&gt;&lt;/div&gt;
 {{{for template|PublicationQuery}}}
-{| class=&quot;formtable&quot;
+{| class="formtable"
 | Titel {{{field|journal}}}
 |-
 | Verlag {{{field|publisher|input type=combobox|property=publisher|existing values only}}}
@@ -230,18 +239,18 @@ Sofern bereits eine Seite mit diesem Namen vorhanden ist, wirst du automatisch z
   <page>
     <title>Formular:Publisher</title>
     <ns>106</ns>
-    <id>6</id>
+    <id>13</id>
     <revision>
-      <id>2653</id>
-      <parentid>6</parentid>
-      <timestamp>2016-12-18T17:22:59Z</timestamp>
+      <id>67</id>
+      <parentid>13</parentid>
+      <timestamp>2019-09-09T11:40:32Z</timestamp>
       <contributor>
-        <username>Administrator</username>
+        <username>Wikiadmin</username>
         <id>1</id>
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="847">&lt;noinclude&gt;
+      <text xml:space="preserve" bytes="917">&lt;noinclude&gt;
 Dies ist das Formular „Publisher“.
 Um eine Seite mit diesem Formular zu erstellen, gib den Seitennamen unten in das Eingabefeld ein.
 Sofern bereits eine Seite mit diesem Namen vorhanden ist, wirst du automatisch zum Formular für das Bearbeiten der Seite weitergeleitet.
@@ -251,9 +260,9 @@ Sofern bereits eine Seite mit diesem Namen vorhanden ist, wirst du automatisch z
 
 &lt;/noinclude&gt;&lt;includeonly&gt;
 {{{info|page name={{UUID}} }}}
-&lt;div id=&quot;wikiPreview&quot; style=&quot;display: none; padding-bottom: 25px; margin-bottom: 25px; border-bottom: 1px solid #AAAAAA;&quot;&gt;&lt;/div&gt;
+&lt;div id="wikiPreview" style="display: none; padding-bottom: 25px; margin-bottom: 25px; border-bottom: 1px solid #AAAAAA;"&gt;&lt;/div&gt;
 {{{for template|Publisher}}}
-{| class=&quot;formtable&quot;
+{| class="formtable"
 | Verlag {{{field|publisher}}}
 |-
 | Ort {{{field|PublisherLocation}}}
@@ -263,25 +272,26 @@ Sofern bereits eine Seite mit diesem Namen vorhanden ist, wirst du automatisch z
 | Adresse {{{field|adress}}}
 |-
 | Homepage {{{field|PublisherHomepage}}}
+|-
+| Status {{{field|status|property=status|default=Neu|restricted}}}
 |}
 {{{end template}}}
 
 {{{standard input|save|label=Speichern}}} {{{standard input|cancel}}}
 &lt;/includeonly&gt;</text>
-      <sha1>h427cm0yio80dx3lf1g96l3bz2c0yq9</sha1>
+      <sha1>7hehi8ha2jg18hp1xvsaxfd40gsv9iq</sha1>
     </revision>
   </page>
   <page>
     <title>Formular:TocQuery</title>
     <ns>106</ns>
-    <id>7</id>
+    <id>14</id>
     <revision>
-      <id>2656</id>
-      <parentid>7</parentid>
+      <id>14</id>
       <timestamp>2016-12-19T11:21:52Z</timestamp>
       <contributor>
-        <username>Administrator</username>
-        <id>1</id>
+        <username>imported&gt;Administrator</username>
+        <id />
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
@@ -295,9 +305,9 @@ Sofern bereits eine Seite mit diesem Namen vorhanden ist, wirst du automatisch z
 
 &lt;/noinclude&gt;&lt;includeonly&gt;
 {{{info|query title=Suche Inhaltsverzeichnis}}}
-&lt;div id=&quot;wikiPreview&quot; style=&quot;display: none; padding-bottom: 25px; margin-bottom: 25px; border-bottom: 1px solid #AAAAAA;&quot;&gt;&lt;/div&gt;
+&lt;div id="wikiPreview" style="display: none; padding-bottom: 25px; margin-bottom: 25px; border-bottom: 1px solid #AAAAAA;"&gt;&lt;/div&gt;
 {{{for template|TocQuery}}}
-{| class=&quot;formtable&quot;
+{| class="formtable"
 | Publikation {{{field|journal|mandatory|input type=combobox|property=journal|existing values only}}}
 |-
 | Jahr {{{field|year|mandatory|input type=year}}}
@@ -315,14 +325,13 @@ Sofern bereits eine Seite mit diesem Namen vorhanden ist, wirst du automatisch z
   <page>
     <title>Attribut:Adress</title>
     <ns>102</ns>
-    <id>8</id>
+    <id>15</id>
     <revision>
-      <id>389</id>
-      <parentid>8</parentid>
+      <id>15</id>
       <timestamp>2016-08-26T07:40:12Z</timestamp>
       <contributor>
-        <username>Kruemel</username>
-        <id>0</id>
+        <username>imported&gt;Kruemel</username>
+        <id />
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
@@ -335,13 +344,13 @@ Sofern bereits eine Seite mit diesem Namen vorhanden ist, wirst du automatisch z
   <page>
     <title>Attribut:Articleid</title>
     <ns>102</ns>
-    <id>5661</id>
+    <id>16</id>
     <revision>
-      <id>6227</id>
+      <id>16</id>
       <timestamp>2017-08-06T20:05:42Z</timestamp>
       <contributor>
-        <username>Administrator</username>
-        <id>1</id>
+        <username>imported&gt;Administrator</username>
+        <id />
       </contributor>
       <comment>Erstellte ein Attribut des Datentyps [[Has type::Text]].</comment>
       <model>wikitext</model>
@@ -353,14 +362,13 @@ Sofern bereits eine Seite mit diesem Namen vorhanden ist, wirst du automatisch z
   <page>
     <title>Attribut:Author</title>
     <ns>102</ns>
-    <id>9</id>
+    <id>17</id>
     <revision>
-      <id>42</id>
-      <parentid>9</parentid>
+      <id>17</id>
       <timestamp>2016-08-26T07:41:58Z</timestamp>
       <contributor>
-        <username>Kruemel</username>
-        <id>0</id>
+        <username>imported&gt;Kruemel</username>
+        <id />
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
@@ -373,13 +381,13 @@ Sofern bereits eine Seite mit diesem Namen vorhanden ist, wirst du automatisch z
   <page>
     <title>Attribut:Contenttype</title>
     <ns>102</ns>
-    <id>2227</id>
+    <id>18</id>
     <revision>
-      <id>2404</id>
+      <id>18</id>
       <timestamp>2016-11-28T16:45:58Z</timestamp>
       <contributor>
-        <username>Administrator</username>
-        <id>1</id>
+        <username>imported&gt;Administrator</username>
+        <id />
       </contributor>
       <comment>Erstellte ein Attribut des Datentyps [[Has type::Text]].</comment>
       <model>wikitext</model>
@@ -397,14 +405,13 @@ Die möglichen Werte für dieses Attribut sind:
   <page>
     <title>Attribut:DNBLink</title>
     <ns>102</ns>
-    <id>10</id>
+    <id>19</id>
     <revision>
-      <id>1806</id>
-      <parentid>10</parentid>
+      <id>19</id>
       <timestamp>2016-11-07T09:45:13Z</timestamp>
       <contributor>
-        <username>Administrator</username>
-        <id>1</id>
+        <username>imported&gt;Administrator</username>
+        <id />
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
@@ -415,14 +422,13 @@ Die möglichen Werte für dieses Attribut sind:
   <page>
     <title>Attribut:Fulltext</title>
     <ns>102</ns>
-    <id>11</id>
+    <id>20</id>
     <revision>
-      <id>1807</id>
-      <parentid>11</parentid>
+      <id>20</id>
       <timestamp>2016-11-07T09:55:43Z</timestamp>
       <contributor>
-        <username>Administrator</username>
-        <id>1</id>
+        <username>imported&gt;Administrator</username>
+        <id />
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
@@ -433,14 +439,13 @@ Die möglichen Werte für dieses Attribut sind:
   <page>
     <title>Attribut:ISSN</title>
     <ns>102</ns>
-    <id>12</id>
+    <id>21</id>
     <revision>
-      <id>1808</id>
-      <parentid>12</parentid>
+      <id>21</id>
       <timestamp>2016-11-07T09:56:12Z</timestamp>
       <contributor>
-        <username>Administrator</username>
-        <id>1</id>
+        <username>imported&gt;Administrator</username>
+        <id />
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
@@ -451,14 +456,13 @@ Die möglichen Werte für dieses Attribut sind:
   <page>
     <title>Attribut:Journal</title>
     <ns>102</ns>
-    <id>13</id>
+    <id>22</id>
     <revision>
-      <id>1809</id>
-      <parentid>13</parentid>
+      <id>22</id>
       <timestamp>2016-11-07T09:56:44Z</timestamp>
       <contributor>
-        <username>Administrator</username>
-        <id>1</id>
+        <username>imported&gt;Administrator</username>
+        <id />
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
@@ -469,14 +473,13 @@ Die möglichen Werte für dieses Attribut sind:
   <page>
     <title>Attribut:Pages</title>
     <ns>102</ns>
-    <id>14</id>
+    <id>23</id>
     <revision>
-      <id>1810</id>
-      <parentid>14</parentid>
+      <id>23</id>
       <timestamp>2016-11-07T09:57:07Z</timestamp>
       <contributor>
-        <username>Administrator</username>
-        <id>1</id>
+        <username>imported&gt;Administrator</username>
+        <id />
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
@@ -487,14 +490,13 @@ Die möglichen Werte für dieses Attribut sind:
   <page>
     <title>Attribut:PublicationUrl</title>
     <ns>102</ns>
-    <id>15</id>
+    <id>24</id>
     <revision>
-      <id>1811</id>
-      <parentid>15</parentid>
+      <id>24</id>
       <timestamp>2016-11-07T09:57:28Z</timestamp>
       <contributor>
-        <username>Administrator</username>
-        <id>1</id>
+        <username>imported&gt;Administrator</username>
+        <id />
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
@@ -505,14 +507,13 @@ Die möglichen Werte für dieses Attribut sind:
   <page>
     <title>Attribut:Publisher</title>
     <ns>102</ns>
-    <id>16</id>
+    <id>25</id>
     <revision>
-      <id>1812</id>
-      <parentid>16</parentid>
+      <id>25</id>
       <timestamp>2016-11-07T09:57:55Z</timestamp>
       <contributor>
-        <username>Administrator</username>
-        <id>1</id>
+        <username>imported&gt;Administrator</username>
+        <id />
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
@@ -523,14 +524,13 @@ Die möglichen Werte für dieses Attribut sind:
   <page>
     <title>Attribut:PublisherHomepage</title>
     <ns>102</ns>
-    <id>17</id>
+    <id>26</id>
     <revision>
-      <id>1813</id>
-      <parentid>17</parentid>
+      <id>26</id>
       <timestamp>2016-11-07T09:58:40Z</timestamp>
       <contributor>
-        <username>Administrator</username>
-        <id>1</id>
+        <username>imported&gt;Administrator</username>
+        <id />
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
@@ -541,14 +541,13 @@ Die möglichen Werte für dieses Attribut sind:
   <page>
     <title>Attribut:PublisherLocation</title>
     <ns>102</ns>
-    <id>18</id>
+    <id>27</id>
     <revision>
-      <id>1814</id>
-      <parentid>18</parentid>
+      <id>27</id>
       <timestamp>2016-11-07T09:59:01Z</timestamp>
       <contributor>
-        <username>Administrator</username>
-        <id>1</id>
+        <username>imported&gt;Administrator</username>
+        <id />
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
@@ -559,14 +558,13 @@ Die möglichen Werte für dieses Attribut sind:
   <page>
     <title>Attribut:PublisherZipCode</title>
     <ns>102</ns>
-    <id>19</id>
+    <id>28</id>
     <revision>
-      <id>1815</id>
-      <parentid>19</parentid>
+      <id>28</id>
       <timestamp>2016-11-07T09:59:21Z</timestamp>
       <contributor>
-        <username>Administrator</username>
-        <id>1</id>
+        <username>imported&gt;Administrator</username>
+        <id />
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
@@ -577,14 +575,13 @@ Die möglichen Werte für dieses Attribut sind:
   <page>
     <title>Attribut:Rubric</title>
     <ns>102</ns>
-    <id>20</id>
+    <id>29</id>
     <revision>
-      <id>1816</id>
-      <parentid>20</parentid>
+      <id>29</id>
       <timestamp>2016-11-07T09:59:44Z</timestamp>
       <contributor>
-        <username>Administrator</username>
-        <id>1</id>
+        <username>imported&gt;Administrator</username>
+        <id />
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
@@ -595,14 +592,13 @@ Die möglichen Werte für dieses Attribut sind:
   <page>
     <title>Attribut:Status</title>
     <ns>102</ns>
-    <id>1526</id>
+    <id>30</id>
     <revision>
-      <id>1570</id>
-      <parentid>1569</parentid>
+      <id>30</id>
       <timestamp>2016-11-05T12:13:38Z</timestamp>
       <contributor>
-        <username>Administrator</username>
-        <id>1</id>
+        <username>imported&gt;Administrator</username>
+        <id />
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
@@ -619,14 +615,13 @@ Die möglichen Werte für dieses Attribut sind:
   <page>
     <title>Attribut:Subrubric</title>
     <ns>102</ns>
-    <id>21</id>
+    <id>31</id>
     <revision>
-      <id>1817</id>
-      <parentid>21</parentid>
+      <id>31</id>
       <timestamp>2016-11-07T10:00:24Z</timestamp>
       <contributor>
-        <username>Administrator</username>
-        <id>1</id>
+        <username>imported&gt;Administrator</username>
+        <id />
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
@@ -637,14 +632,13 @@ Die möglichen Werte für dieses Attribut sind:
   <page>
     <title>Attribut:Subtitle</title>
     <ns>102</ns>
-    <id>22</id>
+    <id>32</id>
     <revision>
-      <id>1818</id>
-      <parentid>22</parentid>
+      <id>32</id>
       <timestamp>2016-11-07T10:00:50Z</timestamp>
       <contributor>
-        <username>Administrator</username>
-        <id>1</id>
+        <username>imported&gt;Administrator</username>
+        <id />
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
@@ -655,14 +649,13 @@ Die möglichen Werte für dieses Attribut sind:
   <page>
     <title>Attribut:Summary</title>
     <ns>102</ns>
-    <id>23</id>
+    <id>33</id>
     <revision>
-      <id>1819</id>
-      <parentid>23</parentid>
+      <id>33</id>
       <timestamp>2016-11-07T10:01:15Z</timestamp>
       <contributor>
-        <username>Administrator</username>
-        <id>1</id>
+        <username>imported&gt;Administrator</username>
+        <id />
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
@@ -673,14 +666,13 @@ Die möglichen Werte für dieses Attribut sind:
   <page>
     <title>Attribut:Title</title>
     <ns>102</ns>
-    <id>24</id>
+    <id>34</id>
     <revision>
-      <id>1820</id>
-      <parentid>24</parentid>
+      <id>34</id>
       <timestamp>2016-11-07T10:01:34Z</timestamp>
       <contributor>
-        <username>Administrator</username>
-        <id>1</id>
+        <username>imported&gt;Administrator</username>
+        <id />
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
@@ -691,14 +683,13 @@ Die möglichen Werte für dieses Attribut sind:
   <page>
     <title>Attribut:Url</title>
     <ns>102</ns>
-    <id>25</id>
+    <id>35</id>
     <revision>
-      <id>1821</id>
-      <parentid>25</parentid>
+      <id>35</id>
       <timestamp>2016-11-07T10:01:54Z</timestamp>
       <contributor>
-        <username>Administrator</username>
-        <id>1</id>
+        <username>imported&gt;Administrator</username>
+        <id />
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
@@ -709,14 +700,13 @@ Die möglichen Werte für dieses Attribut sind:
   <page>
     <title>Attribut:Volume</title>
     <ns>102</ns>
-    <id>26</id>
+    <id>36</id>
     <revision>
-      <id>1822</id>
-      <parentid>26</parentid>
+      <id>36</id>
       <timestamp>2016-11-07T10:02:15Z</timestamp>
       <contributor>
-        <username>Administrator</username>
-        <id>1</id>
+        <username>imported&gt;Administrator</username>
+        <id />
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
@@ -727,14 +717,13 @@ Die möglichen Werte für dieses Attribut sind:
   <page>
     <title>Attribut:WikipediaLink</title>
     <ns>102</ns>
-    <id>27</id>
+    <id>37</id>
     <revision>
-      <id>1823</id>
-      <parentid>27</parentid>
+      <id>37</id>
       <timestamp>2016-11-07T10:02:42Z</timestamp>
       <contributor>
-        <username>Administrator</username>
-        <id>1</id>
+        <username>imported&gt;Administrator</username>
+        <id />
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
@@ -745,14 +734,13 @@ Die möglichen Werte für dieses Attribut sind:
   <page>
     <title>Attribut:Year</title>
     <ns>102</ns>
-    <id>28</id>
+    <id>38</id>
     <revision>
-      <id>1824</id>
-      <parentid>28</parentid>
+      <id>38</id>
       <timestamp>2016-11-07T10:03:07Z</timestamp>
       <contributor>
-        <username>Administrator</username>
-        <id>1</id>
+        <username>imported&gt;Administrator</username>
+        <id />
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
@@ -763,14 +751,13 @@ Die möglichen Werte für dieses Attribut sind:
   <page>
     <title>Vorlage:Article</title>
     <ns>10</ns>
-    <id>29</id>
+    <id>39</id>
     <revision>
-      <id>6335</id>
-      <parentid>5788</parentid>
+      <id>39</id>
       <timestamp>2017-08-06T20:14:06Z</timestamp>
       <contributor>
-        <username>Administrator</username>
-        <id>1</id>
+        <username>imported&gt;Administrator</username>
+        <id />
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
@@ -784,7 +771,7 @@ Sie sollte im folgenden Format genutzt werden:
 }}
 &lt;/pre&gt;
 Klick auf „Bearbeiten“, um den Quelltext der Vorlage anzusehen.
-&lt;/noinclude&gt;&lt;includeonly&gt;{| class=&quot;wikitable&quot;
+&lt;/noinclude&gt;&lt;includeonly&gt;{| class="wikitable"
 ! Titel
 | [[title::{{{title|}}}]]
 |-
@@ -855,14 +842,13 @@ Klick auf „Bearbeiten“, um den Quelltext der Vorlage anzusehen.
   <page>
     <title>Vorlage:ArticleQuery</title>
     <ns>10</ns>
-    <id>30</id>
+    <id>40</id>
     <revision>
-      <id>1292</id>
-      <parentid>1291</parentid>
+      <id>40</id>
       <timestamp>2016-09-28T09:06:38Z</timestamp>
       <contributor>
-        <username>Administrator</username>
-        <id>1</id>
+        <username>imported&gt;Administrator</username>
+        <id />
       </contributor>
       <comment>Änderung 1291 von [[Special:Contributions/Administrator|Administrator]] ([[User talk:Administrator|Diskussion]]) rückgängig gemacht.</comment>
       <model>wikitext</model>
@@ -916,18 +902,18 @@ Klick auf „Bearbeiten“, um den Quelltext der Vorlage anzusehen.
   <page>
     <title>Vorlage:Publication</title>
     <ns>10</ns>
-    <id>31</id>
+    <id>41</id>
     <revision>
-      <id>2092</id>
-      <parentid>31</parentid>
-      <timestamp>2016-11-19T13:51:34Z</timestamp>
+      <id>65</id>
+      <parentid>64</parentid>
+      <timestamp>2019-09-09T11:23:49Z</timestamp>
       <contributor>
-        <username>Administrator</username>
+        <username>Wikiadmin</username>
         <id>1</id>
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="607">&lt;noinclude&gt;
+      <text xml:space="preserve" bytes="720">&lt;noinclude&gt;
 Dies ist die Vorlage „Publication“.
 Sie sollte im folgenden Format genutzt werden:
 &lt;pre&gt;
@@ -936,7 +922,7 @@ Sie sollte im folgenden Format genutzt werden:
 }}
 &lt;/pre&gt;
 Klick auf „Bearbeiten“, um den Quelltext der Vorlage anzusehen.
-&lt;/noinclude&gt;&lt;includeonly&gt;{| class=&quot;wikitable&quot;
+&lt;/noinclude&gt;&lt;includeonly&gt;{| class="wikitable"
 ! Publikation
 | [[journal::{{{journal|}}}]]
 |-
@@ -954,23 +940,30 @@ Klick auf „Bearbeiten“, um den Quelltext der Vorlage anzusehen.
 |-
 ! Wikipedia
 |  [[WikipediaLink::{{{WikipediaLink|}}}]]
+|-
+! Status
+| [[status::{{{status|}}}]]
+|-
+! Inhaltstyp
+| [[Contenttype::Publication]]
 |}
 
 [[Page has default form::Publication]]
+[[Kategorie:Publikation]]
 &lt;/includeonly&gt;</text>
-      <sha1>2pe1edbs1kf0oubk71plf4xlj4ekb13</sha1>
+      <sha1>ki9iviu5v7g3ilcctk1er64e8fznwkg</sha1>
     </revision>
   </page>
   <page>
     <title>Vorlage:PublicationQuery</title>
     <ns>10</ns>
-    <id>32</id>
+    <id>42</id>
     <revision>
-      <id>32</id>
+      <id>42</id>
       <timestamp>2016-03-07T11:49:59Z</timestamp>
       <contributor>
-        <username>Administrator</username>
-        <id>1</id>
+        <username>imported&gt;Administrator</username>
+        <id />
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
@@ -999,18 +992,18 @@ Klick auf „Bearbeiten“, um den Quelltext der Vorlage anzusehen.
   <page>
     <title>Vorlage:Publisher</title>
     <ns>10</ns>
-    <id>33</id>
+    <id>43</id>
     <revision>
-      <id>2169</id>
-      <parentid>33</parentid>
-      <timestamp>2016-11-19T21:26:09Z</timestamp>
+      <id>70</id>
+      <parentid>66</parentid>
+      <timestamp>2019-09-09T11:44:44Z</timestamp>
       <contributor>
-        <username>Administrator</username>
+        <username>Wikiadmin</username>
         <id>1</id>
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="575">&lt;noinclude&gt;
+      <text xml:space="preserve" bytes="681">&lt;noinclude&gt;
 Dies ist die Vorlage „Publisher“.
 Sie sollte im folgenden Format genutzt werden:
 &lt;pre&gt;
@@ -1019,7 +1012,7 @@ Sie sollte im folgenden Format genutzt werden:
 }}
 &lt;/pre&gt;
 Klick auf „Bearbeiten“, um den Quelltext der Vorlage anzusehen.
-&lt;/noinclude&gt;&lt;includeonly&gt;{| class=&quot;wikitable&quot;
+&lt;/noinclude&gt;&lt;includeonly&gt;{| class="wikitable"
 ! Verlag
 | [[publisher::{{{publisher|}}}]]
 |-
@@ -1034,24 +1027,30 @@ Klick auf „Bearbeiten“, um den Quelltext der Vorlage anzusehen.
 |-
 ! Homepage
 | [[PublisherHomepage::{{{PublisherHomepage|}}}]]
+|-
+! Status
+| [[status::{{{status|}}}]]
+|-
+! Inhaltstyp
+| [[Contenttype::Publisher]]
 |}
 
 [[Page has default form::Publisher]]
+[[Kategorie:Verlag]]
 &lt;/includeonly&gt;</text>
-      <sha1>0h3egabv72y8v61nexd0qs1k5c4naxf</sha1>
+      <sha1>euyxa4tu3k0xbqnn3v9v5s03f28g1fw</sha1>
     </revision>
   </page>
   <page>
     <title>Vorlage:TocQuery</title>
     <ns>10</ns>
-    <id>34</id>
+    <id>44</id>
     <revision>
-      <id>2174</id>
-      <parentid>2173</parentid>
+      <id>44</id>
       <timestamp>2016-11-21T10:42:58Z</timestamp>
       <contributor>
-        <username>Administrator</username>
-        <id>1</id>
+        <username>imported&gt;Administrator</username>
+        <id />
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
@@ -1081,18 +1080,17 @@ Klick auf „Bearbeiten“, um den Quelltext der Vorlage anzusehen.
   <page>
     <title>MediaWiki:Sidebar</title>
     <ns>8</ns>
-    <id>35</id>
+    <id>45</id>
     <revision>
-      <id>2401</id>
-      <parentid>35</parentid>
+      <id>45</id>
       <timestamp>2016-11-28T16:16:10Z</timestamp>
       <contributor>
-        <username>Administrator</username>
-        <id>1</id>
+        <username>imported&gt;Administrator</username>
+        <id />
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="745">
+      <text xml:space="preserve" bytes="744">
 * navigation
 ** mainpage|mainpage-description
 ** recentchanges-url|recentchanges
@@ -1118,19 +1116,19 @@ Klick auf „Bearbeiten“, um den Quelltext der Vorlage anzusehen.
 * SEARCH
 * TOOLBOX
 * LANGUAGES</text>
-      <sha1>k4b43kdydadz8bulfku99t0ji59xl8p</sha1>
+      <sha1>boq6px8ak8bjhoxkbppvwvtifanq013</sha1>
     </revision>
   </page>
   <page>
     <title>Liste aller Artikel</title>
     <ns>0</ns>
-    <id>36</id>
+    <id>46</id>
     <revision>
-      <id>36</id>
+      <id>46</id>
       <timestamp>2016-06-27T11:58:58Z</timestamp>
       <contributor>
-        <username>Administrator</username>
-        <id>1</id>
+        <username>imported&gt;Administrator</username>
+        <id />
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
@@ -1166,14 +1164,13 @@ Klick auf „Bearbeiten“, um den Quelltext der Vorlage anzusehen.
   <page>
     <title>Liste aller Publikationen</title>
     <ns>0</ns>
-    <id>37</id>
+    <id>47</id>
     <revision>
-      <id>2152</id>
-      <parentid>2102</parentid>
+      <id>47</id>
       <timestamp>2016-11-19T15:25:08Z</timestamp>
       <contributor>
-        <username>Administrator</username>
-        <id>1</id>
+        <username>imported&gt;Administrator</username>
+        <id />
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
@@ -1193,14 +1190,13 @@ Klick auf „Bearbeiten“, um den Quelltext der Vorlage anzusehen.
   <page>
     <title>Liste aller Verlage</title>
     <ns>0</ns>
-    <id>38</id>
+    <id>48</id>
     <revision>
-      <id>2171</id>
-      <parentid>2170</parentid>
+      <id>48</id>
       <timestamp>2016-11-19T22:02:31Z</timestamp>
       <contributor>
-        <username>Administrator</username>
-        <id>1</id>
+        <username>imported&gt;Administrator</username>
+        <id />
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
@@ -1220,19 +1216,18 @@ Klick auf „Bearbeiten“, um den Quelltext der Vorlage anzusehen.
   <page>
     <title>Wikijournals</title>
     <ns>0</ns>
-    <id>42</id>
+    <id>49</id>
     <revision>
-      <id>17929</id>
-      <parentid>17919</parentid>
+      <id>49</id>
       <timestamp>2017-10-31T14:57:50Z</timestamp>
       <contributor>
-        <username>Administrator</username>
-        <id>1</id>
+        <username>imported&gt;Administrator</username>
+        <id />
       </contributor>
       <minor/>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="926">{{#seo:
+      <text xml:space="preserve" bytes="924">{{#seo:
 |title=Crowdsourcing for journal articles
 |titlemode=append
 |keywords=articles, artikel, journals, zeitschriften, publisher, verlage, autoren, authors, semantic web
@@ -1248,19 +1243,19 @@ Ausführlichere Informationen zu wikijournals findet ihr [[Wikijournals:Über_Wi
 &lt;br /&gt;
 &lt;br /&gt;
 Wer gleich im Archiv stöbern möchte, kommt über [[Spezial:Suche|diesen Link]]  direkt zur Suchfunktion.</text>
-      <sha1>2nzazx15v2k4fnyd3sm1e2yvibo3fo1</sha1>
+      <sha1>7h1dg2diad546hokeq6nwz4av8a9wc1</sha1>
     </revision>
   </page>
   <page>
     <title>Kategorie:Wikijournals</title>
     <ns>14</ns>
-    <id>40</id>
+    <id>50</id>
     <revision>
-      <id>40</id>
+      <id>50</id>
       <timestamp>2016-08-01T08:27:53Z</timestamp>
       <contributor>
-        <username>Administrator</username>
-        <id>1</id>
+        <username>imported&gt;Administrator</username>
+        <id />
       </contributor>
       <model>wikitext</model>
       <format>text/x-wiki</format>
@@ -1271,13 +1266,13 @@ Wer gleich im Archiv stöbern möchte, kommt über [[Spezial:Suche|diesen Link]]
   <page>
     <title>Kategorie:Artikel</title>
     <ns>14</ns>
-    <id>5240</id>
+    <id>51</id>
     <revision>
-      <id>5785</id>
+      <id>51</id>
       <timestamp>2017-06-12T13:36:57Z</timestamp>
       <contributor>
-        <username>Administrator</username>
-        <id>1</id>
+        <username>imported&gt;Administrator</username>
+        <id />
       </contributor>
       <comment>Die Seite wurde neu angelegt: „{{#default_form:Article}}“</comment>
       <model>wikitext</model>
@@ -1289,19 +1284,37 @@ Wer gleich im Archiv stöbern möchte, kommt über [[Spezial:Suche|diesen Link]]
   <page>
     <title>Kategorie:Publikation</title>
     <ns>14</ns>
-    <id>5241</id>
+    <id>52</id>
     <revision>
-      <id>5787</id>
+      <id>52</id>
       <timestamp>2017-06-12T13:40:47Z</timestamp>
       <contributor>
-        <username>Administrator</username>
-        <id>1</id>
+        <username>imported&gt;Administrator</username>
+        <id />
       </contributor>
       <comment>Die Seite wurde neu angelegt: „{{#default_form:Publication}}“</comment>
       <model>wikitext</model>
       <format>text/x-wiki</format>
       <text xml:space="preserve" bytes="29">{{#default_form:Publication}}</text>
       <sha1>jpn9fy4l99qmf1y6klge9r4u9qy6165</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Kategorie:Verlag</title>
+    <ns>14</ns>
+    <id>59</id>
+    <revision>
+      <id>72</id>
+      <timestamp>2019-09-09T11:49:01Z</timestamp>
+      <contributor>
+        <username>Wikiadmin</username>
+        <id>1</id>
+      </contributor>
+      <comment>Die Seite wurde neu angelegt: „{{#default_form:Publisher}}“</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="27">{{#default_form:Publisher}}</text>
+      <sha1>jx3g8u7u84j6opp50l7p0d5cvye6f26</sha1>
     </revision>
   </page>
 </mediawiki>

@@ -1,9 +1,9 @@
 <mediawiki xmlns="http://www.mediawiki.org/xml/export-0.10/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.10/ http://www.mediawiki.org/xml/export-0.10.xsd" version="0.10" xml:lang="de">
   <siteinfo>
-    <sitename>Wikijournals</sitename>
-    <dbname>wikijournals4</dbname>
-    <base>http://localhost/wikijournals4/index.php/Hauptseite</base>
-    <generator>MediaWiki 1.32.0</generator>
+    <sitename>wikijournals</sitename>
+    <dbname>wikijournals</dbname>
+    <base>http://localhost/wikijournals/index.php/Hauptseite</base>
+    <generator>MediaWiki 1.33.0</generator>
     <case>first-letter</case>
     <namespaces>
       <namespace key="-2" case="first-letter">Medium</namespace>
@@ -12,8 +12,8 @@
       <namespace key="1" case="first-letter">Diskussion</namespace>
       <namespace key="2" case="first-letter">Benutzer</namespace>
       <namespace key="3" case="first-letter">Benutzer Diskussion</namespace>
-      <namespace key="4" case="first-letter">Wikijournals</namespace>
-      <namespace key="5" case="first-letter">Wikijournals Diskussion</namespace>
+      <namespace key="4" case="first-letter">wikijournals</namespace>
+      <namespace key="5" case="first-letter">wikijournals Diskussion</namespace>
       <namespace key="6" case="first-letter">Datei</namespace>
       <namespace key="7" case="first-letter">Datei Diskussion</namespace>
       <namespace key="8" case="first-letter">MediaWiki</namespace>
@@ -38,6 +38,8 @@
       <namespace key="275" case="first-letter">Widget Diskussion</namespace>
       <namespace key="420" case="first-letter">GeoJson</namespace>
       <namespace key="421" case="first-letter">GeoJson talk</namespace>
+      <namespace key="1198" case="first-letter">Translations</namespace>
+      <namespace key="1199" case="first-letter">Translations talk</namespace>
       <namespace key="3000" case="first-letter">Publisher</namespace>
       <namespace key="3001" case="first-letter">Publisher talk</namespace>
       <namespace key="3002" case="first-letter">Publication</namespace>
@@ -47,27 +49,26 @@
   <page>
     <title>Publisher:Heise Verlag</title>
     <ns>3000</ns>
-    <id>52</id>
+    <id>53</id>
     <revision>
-      <id>54</id>
+      <id>68</id>
       <parentid>53</parentid>
-      <timestamp>2019-03-17T10:17:10Z</timestamp>
+      <timestamp>2019-09-09T11:42:42Z</timestamp>
       <contributor>
-        <username>Administrator</username>
+        <username>Wikiadmin</username>
         <id>1</id>
       </contributor>
-      <minor/>
-      <comment>Administrator verschob die Seite [[0621ee66-91f1-430a-a109-6e14ff4377db]] nach [[Publisher:Heise Verlag]], ohne dabei eine Weiterleitung anzulegen</comment>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="176">{{Publisher
+      <text xml:space="preserve" bytes="193">{{Publisher
 |publisher=Heise Medien GmbH &amp; Co. KG
 |PublisherLocation=Hannover
 |PublisherZipCode=30625
 |adress=Karl-Wiechert-Allee 10
 |PublisherHomepage=https://www.heise.de/
-}}</text>Publisher:Yeebase
-      <sha1>7m3fa2no6h9al95k88g6p7cc124jxpd</sha1>
+|status=Geprüft
+}}</text>
+      <sha1>rixmd4dcjy14ak2vkd3ctlnkbv96e1a</sha1>
     </revision>
   </page>
   <page>
@@ -75,25 +76,24 @@
     <ns>3000</ns>
     <id>54</id>
     <revision>
-      <id>59</id>
-      <parentid>58</parentid>
-      <timestamp>2019-03-17T10:22:31Z</timestamp>
+      <id>69</id>
+      <parentid>54</parentid>
+      <timestamp>2019-09-09T11:43:12Z</timestamp>
       <contributor>
-        <username>Administrator</username>
+        <username>Wikiadmin</username>
         <id>1</id>
       </contributor>
-      <minor/>
-      <comment>Administrator verschob die Seite [[6cb994a7-fe02-49b5-8dcd-036752d31792]] nach [[Publisher:Yeebase]], ohne dabei eine Weiterleitung anzulegen</comment>
       <model>wikitext</model>
       <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="159">{{Publisher
+      <text xml:space="preserve" bytes="176">{{Publisher
 |publisher=yeebase media GmbH
 |PublisherLocation=Hannover
 |PublisherZipCode=30161
 |adress=Kriegerstr. 40
 |PublisherHomepage=https://yeebase.com/
+|status=Geprüft
 }}</text>
-      <sha1>dsvrdgs3ewpv8qx6hc6wy3ho33zhbi8</sha1>
+      <sha1>q0iriinfoyfw7ezhbpv08mdkmtjto3m</sha1>
     </revision>
   </page>
 </mediawiki>
