@@ -16,7 +16,7 @@ set MEDIAWIKIVERSION=1.33
 set MEDIAWIKIMINORVERSION=0
 set MEDIAWIKIURL=https://releases.wikimedia.org/mediawiki/%MEDIAWIKIVERSION%/mediawiki-%MEDIAWIKIVERSION%.%MEDIAWIKIMINORVERSION%.tar.gz
 set MEDIAWIKIDIR=mediawiki-%MEDIAWIKIVERSION%.%MEDIAWIKIMINORVERSION%
-cd %htmldir%
+cd %HTMLDIR%
 
 curl %MEDIAWIKIURL% --output wikijournals.tar.gz
 
