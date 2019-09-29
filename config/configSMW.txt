@@ -1,0 +1,2 @@
+// SMW extensions
+enableSemantics( 'localhost' );

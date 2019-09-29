@@ -1,0 +1,15 @@
+// Define constants for my additional namespaces.
+define("NS_Publisher", 3000); // This MUST be even.
+define("NS_Publisher_TALK", 3001); // This MUST be the following odd integer.
+define("NS_Publication", 3002);
+define("NS_Publication_TALK", 3003);
+
+// Add namespaces.
+$wgExtraNamespaces[NS_Publisher] = "Publisher";
+$wgExtraNamespaces[NS_Publisher_TALK] = "Publisher_talk"; // Note underscores in the namespace name.
+$wgExtraNamespaces[NS_Publication] = "Publication";
+$wgExtraNamespaces[NS_Publication_TALK] = "Publication_talk"; // Note underscores in the namespace name.
+
+// Activate namespaces for smw
+$smwgNamespacesWithSemanticLinks[NS_Publisher] = true;
+$smwgNamespacesWithSemanticLinks[NS_Publication] = true;

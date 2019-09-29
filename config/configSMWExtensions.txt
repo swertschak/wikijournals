@@ -1,0 +1,8 @@
+wfLoadExtension( 'SemanticCompoundQueries' );
+wfLoadExtension( 'Maps' );
+wfLoadExtension( 'SemanticResultFormats' );
+wfLoadExtension( 'PageForms' );
+
+include_once("$IP/extensions/SemanticDrilldown/SemanticDrilldown.php");
+include_once("$IP/extensions/SemanticInternalObjects/SemanticInternalObjects.php");
+
