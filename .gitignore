@@ -87,4 +87,4 @@ ENV/
 
 # Rope project settings
 .ropeproject
-/tools/Install_Wikijournals_Test.sh
+/install/Install_Wikijournals_Test.sh
