@@ -3,7 +3,7 @@ wfLoadExtension( 'WikiEditor' );
 
 require_once("$IP/extensions/AdminLinks/AdminLinks.php");
 include_once("$IP/extensions/DataTransfer/DataTransfer.php");
-require_once("$IP/extensions/ExternalData/ExternalData.php");
+wfLoadExtension( 'ExternalData' );
 require_once("$IP/extensions/HeaderTabs/HeaderTabs.php");
 require_once("$IP/extensions/MyVariables/MyVariables.php");
 include_once("$IP/extensions/PageSchemas/PageSchemas.php");
