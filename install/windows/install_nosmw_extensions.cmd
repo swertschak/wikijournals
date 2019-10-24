@@ -4,31 +4,124 @@ echo Set install parameter from ini file
 
 for /f "delims=" %%x in (wikijournals.ini) do (set "%%x")
 
+echo - Install NoSMW Extensions - >> %PROJECTDIR%\install\windows\wikijournals.log
+
 cd %HTMLDIR%/%WIKIDIR%/extensions
+if %ERRORLEVEL% NEQ 0 (
+echo Could not change to extensions directory failed >> %PROJECTDIR%\install\windows\wikijournals.log
+exit 1
+)
+
 
 git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/AdminLinks.git
+if %ERRORLEVEL% NEQ 0 (
+echo Cloning AdminLinks repository failed >> %PROJECTDIR%\install\windows\wikijournals.log
+exit 1
+)
+
 git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/DataTransfer.git
+if %ERRORLEVEL% NEQ 0 (
+echo Cloning ExternalData repository failed >> %PROJECTDIR%\install\windows\wikijournals.log
+exit 1
+)
+
 git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/ExternalData.git
+if %ERRORLEVEL% NEQ 0 (
+echo Cloning ExternalData repository failed >> %PROJECTDIR%\install\windows\wikijournals.log
+exit 1
+)
+
 git clone https://phabricator.wikimedia.org/diffusion/EHET/extension-headertabs.git HeaderTabs
+if %ERRORLEVEL% NEQ 0 (
+echo Cloning HeaderTabs repository failed >> %PROJECTDIR%\install\windows\wikijournals.log
+exit 1
+)
+
 git clone https://phabricator.wikimedia.org/diffusion/EMYV/extension-myvariables.git MyVariables
+if %ERRORLEVEL% NEQ 0 (
+echo Cloning MyVariables repository failed >> %PROJECTDIR%\install\windows\wikijournals.log
+exit 1
+)
+
 git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/PageSchemas.git
+if %ERRORLEVEL% NEQ 0 (
+echo Cloning PageSchemas repository failed >> %PROJECTDIR%\install\windows\wikijournals.log
+exit 1
+)
+
 git clone https://phabricator.wikimedia.org/diffusion/EVAR/extension-variables.git Variables
+if %ERRORLEVEL% NEQ 0 (
+echo Cloning Variables repository failed >> %PROJECTDIR%\install\windows\wikijournals.log
+exit 1
+)
+
 git clone https://gerrit.wikimedia.org/r/p/mediawiki/extensions/Widgets.git
+if %ERRORLEVEL% NEQ 0 (
+echo Cloning Widgets repository failed >> %PROJECTDIR%\install\windows\wikijournals.log
+exit 1
+)
 
 cd Widgets
+if %ERRORLEVEL% NEQ 0 (
+echo Changing to widgets directory failed >> %PROJECTDIR%\install\windows\wikijournals.log
+exit 1
+)
+
 git submodule init
+if %ERRORLEVEL% NEQ 0 (
+echo Init widgets failed >> %PROJECTDIR%\install\windows\wikijournals.log
+exit 1
+)
+
 git submodule update
+if %ERRORLEVEL% NEQ 0 (
+echo Update widgets failed >> %PROJECTDIR%\install\windows\wikijournals.log
+exit 1
+)
 
 echo Update LocalSetting.php
 
 cd %HTMLDIR%/%WIKIDIR%
+if %ERRORLEVEL% NEQ 0 (
+echo Changing to wikijournals directory failed >> %PROJECTDIR%\install\windows\wikijournals.log
+exit 1
+)
 
 type LocalSettings.php %PROJECTDIR%\config\configNoSMWExtensions.txt > LocalSettings.bak
+if %ERRORLEVEL% NEQ 0 (
+echo Append NoSMW Extensions config to LocalSettings.php failed >> %PROJECTDIR%\install\windows\wikijournals.log
+exit 1
+)
+
 del LocalSettings.php
+if %ERRORLEVEL% NEQ 0 (
+echo Deleting old Settings.php failed >> %PROJECTDIR%\install\windows\wikijournals.log
+exit 1
+)
+
 ren LocalSettings.bak LocalSettings.php
+if %ERRORLEVEL% NEQ 0 (
+echo Rename new LocalSettings.php failed >> %PROJECTDIR%\install\windows\wikijournals.log
+exit 1
+)
 
 cd %HTMLDIR%/%WIKIDIR%/maintenance
+if %ERRORLEVEL% NEQ 0 (
+echo Change to maintenance Directory failed >> %PROJECTDIR%\install\windows\wikijournals.log
+exit 1
+)
+
 
 call php update.php
+if %ERRORLEVEL% NEQ 0 (
+echo Update Mediawiki failed >> %PROJECTDIR%\install\windows\wikijournals.log
+exit 1
+)
 
 cd %PROJECTDIR%\install\windows
+if %ERRORLEVEL% NEQ 0 (
+echo Change to Project Directory failed >> %PROJECTDIR%\install\windows\wikijournals.log
+exit 1
+)
+
+echo NoSMW Extensions installed successful >> %PROJECTDIR%\install\windows\wikijournals.log

@@ -48,4 +48,4 @@ then
   exit 1
 fi
 
-echo "Wikijournal structure installed succesful"
+echo "Wikijournals structure installed succesful"

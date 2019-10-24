@@ -23,7 +23,7 @@ cd ..
 sed -i 's/$wgDefaultSkin = \"vector/$wgDefaultSkin = \"foreground/' LocalSettings.php
 if [ $? -ne 0 ]
 then
-  echo "Settin foreground as default skin failed"
+  echo "Setting foreground as default skin failed"
   exit 1
 fi
 
