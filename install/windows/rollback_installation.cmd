@@ -16,3 +16,5 @@ mysql -u %DBUSER% -p%DBPASS% %DBNAME% -e "drop table %%i"
 )
 
 del tables.txt
+
+echo %date%-%time% success
