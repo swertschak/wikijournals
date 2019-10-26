@@ -4,48 +4,48 @@ echo off
 
 . $(pwd)/wikijournals.conf
 
-echo Install Semantic Mediawiki
+echo $(date) - Install Semantic Mediawiki - >> $PROJECTDIR/install/linux/wikijournals.log
 
 cd $HTMLDIR/$WIKIDIR
 if [ $? -ne 0 ]
 then
-  echo "Changing to wikijournals directory failed"
+  echo $(date) Changing to wikijournals directory failed >> $PROJECTDIR/install/linux/wikijournals.log
   exit 1
 fi
 
 composer require mediawiki/semantic-media-wiki "3.1.0"
 if [ $? -ne 0 ]
 then
-  echo "Install Semantic Mediawiki using composer failed"
+  echo $(date) Install Semantic Mediawiki using composer failed >> $PROJECTDIR/install/linux/wikijournals.log
   exit 1
 fi
 
 cat $PROJECTDIR/config/configSMW.txt >> LocalSettings.php
 if [ $? -ne 0 ]
 then
-  echo "Appending SMW Config to LocalSettings.php failed"
+  echo $(date) Appending SMW Config to LocalSettings.php failed >> $PROJECTDIR/install/linux/wikijournals.log
   exit 1
 fi
 
 cd maintenance
 if [ $? -ne 0 ]
 then
-  echo "Changing to maintenance directory failed"
+  echo $(date) Changing to maintenance directory failed >> $PROJECTDIR/install/linux/wikijournals.log
   exit 1
 fi
 
 php update.php
 if [ $? -ne 0 ]
 then
-  echo "Update Mediawiki failed"
+  echo $(date) Update Mediawiki failed >> $PROJECTDIR/install/linux/wikijournals.log
   exit 1
 fi
 
 cd $PROJECTDIR/install/linux
 if [ $? -ne 0 ]
 then
-  echo "Changing to project directory failed"
+  echo $(date) Changing to project directory failed >> $PROJECTDIR/install/linux/wikijournals.log
   exit 1
 fi
 
-echo "Semantic Mediawiki installed succesful"
+echo $(date) - Semantic Mediawiki installed succesful - >> $PROJECTDIR/install/linux/wikijournals.log

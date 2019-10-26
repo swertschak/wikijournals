@@ -18,76 +18,78 @@ echo wikiname: $WIKINAME
 echo Mediawiki Main Version: $MEDIAWIKIVERSION
 echo Mediawiki Minor Version: $MEDIAWIKIMINORVERSION
 
-echo Download Mediawiki
+echo $(date) - Install Mediawiki - >> $PROJECTDIR/install/linux/wikijournals.log
+
+echo $(date) Download Mediawiki >> $PROJECTDIR/install/linux/wikijournals.log
 
 cd $HTMLDIR
 
 wget https://releases.wikimedia.org/mediawiki/$MEDIAWIKIVERSION/mediawiki-$MEDIAWIKIVERSION.$MEDIAWIKIMINORVERSION.tar.gz
 if [ $? -ne 0 ]
 then
-  echo "Download Mediawiki failed"
+  echo $(date) Download Mediawiki failed >> $PROJECTDIR/install/linux/wikijournals.log
   exit 1
 fi
 
-echo Uncompress Mediawiki into wikijournals directory
+echo $(date) Uncompress Mediawiki into wikijournals directory >> $PROJECTDIR/install/linux/wikijournals.log
 
 tar -xvzf mediawiki-$MEDIAWIKIVERSION.$MEDIAWIKIMINORVERSION.tar.gz
 if [ $? -ne 0 ]
 then
-  echo "Uncompress Mediawiki Download failed"
+  echo $(date) Uncompress Mediawiki Download failed >> $PROJECTDIR/install/linux/wikijournals.log
   exit 1
 fi
 
 mv mediawiki-$MEDIAWIKIVERSION.$MEDIAWIKIMINORVERSION $WIKIDIR
 if [ $? -ne 0 ]
 then
-  echo "Move Mediawiki direcory failed"
+  echo $(date) Move Mediawiki direcory failed >> $PROJECTDIR/install/linux/wikijournals.log
   exit 1
 fi
 
 rm mediawiki-$MEDIAWIKIVERSION.$MEDIAWIKIMINORVERSION.tar.gz
 if [ $? -ne 0 ]
 then
-  echo "Remove Mediawiki download failed"
+  echo $(date) Remove Mediawiki download failed >> $PROJECTDIR/install/linux/wikijournals.log
   exit 1
 fi
 
-echo Set rights for www-data
+echo $(date) Set rights for www-data >> $PROJECTDIR/install/linux/wikijournals.log
 
 chown -cR www-data:www-data $WIKIDIR
 if [ $? -ne 0 ]
 then
-  echo "Setting rights for Mediawiki Directory failed"
+  echo $(date) Setting rights for Mediawiki Directory failed >> $PROJECTDIR/install/linux/wikijournals.log
   exit 1
 fi
 
-echo Install Wikijournals
+echo $(date) Install Mediawiki >> $PROJECTDIR/install/linux/wikijournals.log
 
 cd $HTMLDIR/$WIKIDIR/maintenance
 if [ $? -ne 0 ]
 then
-  echo "Change to maintenance Directory failed"
+  echo $(date) Change to maintenance Directory failed >> $PROJECTDIR/install/linux/wikijournals.log
   exit 1
 fi
 
 php install.php --dbuser=$DBUSER --dbpass=$DBPASS --dbserver=$DBSERVER --dbname=$DBNAME --dbtype=mysql --installdbpass=$DBPASS --installdbuser=$DBUSER --lang=de --pass=$WIKIPWD --scriptpath=/$WIKIDIR  $WIKINAME $WIKIUSER
 if [ $? -ne 0 ]
 then
-  echo "PHP Mediawiki installation script failed"
+  echo $(date) PHP Mediawiki installation script failed >> $PROJECTDIR/install/linux/wikijournals.log
   exit 1
 fi
 
 cd $HTMLDIR/$WIKIDIR
 if [ $? -ne 0 ]
 then
-  echo "Change to Wikijournals Directory failed"
+  echo $(date) Change to Wikijournals Directory failed >> $PROJECTDIR/install/linux/wikijournals.log
   exit 1
 fi
 
 cat $PROJECTDIR/config/configMediawiki.txt >> LocalSettings.php
 if [ $? -ne 0 ]
 then
-  echo "Append Mediawiki Config to LocalSettings.php failed"
+  echo $(date) Append Mediawiki Config to LocalSettings.php failed >> $PROJECTDIR/install/linux/wikijournals.log
   exit 1
 fi
 
@@ -95,8 +97,8 @@ fi
 cd $PROJECTDIR/install/linux
 if [ $? -ne 0 ]
 then
-  echo "Change to Project Directory failed"
+  echo $(date) Change to Project Directory failed >> $PROJECTDIR/install/linux/wikijournals.log
   exit 1
 fi
 
-echo "Mediawiki installed succesful"
+echo $(date) - Mediawiki installed succesful - >> $PROJECTDIR/install/linux/wikijournals.log

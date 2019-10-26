@@ -3,7 +3,10 @@
 echo Install Wikijournals
 
 . $(pwd)/wikijournals.conf
-all
+
+
+echo $(date) = Install Wikijournals = > $PROJECTDIR/install/linux/wikijournals.log
+
 sh check_config_parameters.sh
 
 if [ $? -ne 0 ]
@@ -67,5 +70,7 @@ then
   echo "Import Metadata instalallation failed"
   exit 1
 fi
+
+echo $(date) = Install Wikijournals successful = >> $PROJECTDIR/install/linux/wikijournals.log
 
 

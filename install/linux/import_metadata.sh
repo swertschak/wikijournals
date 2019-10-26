@@ -1,46 +1,48 @@
 #!/usr/bin/env bash
 echo off
-echo Import Metadata
+
 
 . $(pwd)/wikijournals.conf
+
+echo $(date) - Import Metadata - >> $PROJECTDIR/install/linux/wikijournals.log
 
 cd $HTMLDIR/$WIKIDIR/maintenance
 if [ $? -ne 0 ]
 then
-  echo "Change to maintenance directory failed"
+  echo $(date) Change to maintenance directory failed >> $PROJECTDIR/install/linux/wikijournals.log
   exit 1
 fi
 
-echo Import Metadata Publisher
+echo $(date) Import Metadata Publisher >> $PROJECTDIR/install/linux/wikijournals.log
 
 php importDump.php < $PROJECTDIR/data/publisher.xml
 if [ $? -ne 0 ]
 then
-  echo "Import Publisher Metadata failed"
+  echo $(date) Import Publisher Metadata failed >> $PROJECTDIR/install/linux/wikijournals.log
   exit 1
 fi
 
-echo Import Metadata Publications
+echo $(date) Import Metadata Publications >> $PROJECTDIR/install/linux/wikijournals.log
 
 php importDump.php < $PROJECTDIR/data/publications.xml
 if [ $? -ne 0 ]
 then
-  echo "Import Publications Metadata failed"
+  echo $(date) Import Publications Metadata failed >> $PROJECTDIR/install/linux/wikijournals.log
   exit 1
 fi
 
 php rebuildall.php
 if [ $? -ne 0 ]
 then
-  echo "Rebuildall failed"
+  echo $(date) Rebuildall failed >> $PROJECTDIR/install/linux/wikijournals.log
   exit 1
 fi
 
 cd $PROJECTDIR/install/linux
 if [ $? -ne 0 ]
 then
-  echo "Change to project directory failed"
+  echo $(date) Change to project directory failed >> $PROJECTDIR/install/linux/wikijournals.log
   exit 1
 fi
 
-echo "Metadata imported succesful"
+echo $(date) - Metadata imported succesful - >> $PROJECTDIR/install/linux/wikijournals.log

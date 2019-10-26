@@ -2,85 +2,85 @@
 
 echo off
 
-echo Install Translation Extensions
+echo $(date) - Install Translation Extensions ->> $PROJECTDIR/install/linux/wikijournals.log
 
 . $(pwd)/wikijournals.conf
 
 cd $HTMLDIR/$WIKIDIR/extensions
 if [ $? -ne 0 ]
 then
-  echo "Changing to extensions directory failed"
+  echo $(date) Changing to extensions directory failed>> $PROJECTDIR/install/linux/wikijournals.log
   exit 1
 fi
 
 git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/Babel.git
 if [ $? -ne 0 ]
 then
-  echo "Cloning Babel repository failed"
+  echo $(date) Cloning Babel repository failed>> $PROJECTDIR/install/linux/wikijournals.log
   exit 1
 fi
 
 git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/cldr.git
 if [ $? -ne 0 ]
 then
-  echo "Cloning CLDR repository failed"
+  echo $(date) Cloning CLDR repository failed>> $PROJECTDIR/install/linux/wikijournals.log
   exit 1
 fi
 
 git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/CleanChanges.git
 if [ $? -ne 0 ]
 then
-  echo "Cloning CleanChanges repository failed"
+  echo $(date) Cloning CleanChanges repository failed>> $PROJECTDIR/install/linux/wikijournals.log
   exit 1
 fi
 
 git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/Translate.git
 if [ $? -ne 0 ]
 then
-  echo "Cloning Translate repository failed"
+  echo $(date) Cloning Translate repository failed>> $PROJECTDIR/install/linux/wikijournals.log
   exit 1
 fi
 
 git clone https://gerrit.wikimedia.org/r/mediawiki/extensions/UniversalLanguageSelector.git
 if [ $? -ne 0 ]
 then
-  echo "Cloning Universal Language Selector repository failed"
+  echo $(date) Cloning Universal Language Selector repository failed>> $PROJECTDIR/install/linux/wikijournals.log
   exit 1
 fi
 
 cd $HTMLDIR/$WIKIDIR
 if [ $? -ne 0 ]
 then
-  echo "Changing to wikijournals directory failed"
+  echo $(date) Changing to wikijournals directory failed>> $PROJECTDIR/install/linux/wikijournals.log
   exit 1
 fi
 
 cat $PROJECTDIR/config/configTranslation.txt >> LocalSettings.php
 if [ $? -ne 0 ]
 then
-  echo "Append Translation config to LocalSettings.php failed"
+  echo $(date) Append Translation config to LocalSettings.php failed>> $PROJECTDIR/install/linux/wikijournals.log
   exit 1
 fi
 
 cd $HTMLDIR/$WIKIDIR/maintenance
 if [ $? -ne 0 ]
 then
-  echo "Change to maintenance directory failed"
+  echo $(date) Change to maintenance directory failed>> $PROJECTDIR/install/linux/wikijournals.log
   exit 1
 fi
 
 php update.php
 if [ $? -ne 0 ]
 then
-  echo "Update mediawiki failed"
+  echo $(date) Update mediawiki failed>> $PROJECTDIR/install/linux/wikijournals.log
   exit 1
 fi
 
 cd $PROJECTDIR/install/linux
 if [ $? -ne 0 ]
 then
-  echo "Change to project directory failed"
+  echo $(date) Change to project directory failed>> $PROJECTDIR/install/linux/wikijournals.log
   exit 1
 fi
 
-echo "Translation extensions installed succesful"
+echo $(date) - Translation extensions installed succesful - >> $PROJECTDIR/install/linux/wikijournals.log

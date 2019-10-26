@@ -4,71 +4,75 @@ echo off
 
 . $(pwd)/wikijournals.conf
 
-echo html directory: $HTMLDIR
-echo wikijournals directory: $WIKIDIR
-echo dbuser: $DBUSER
-echo dbpass: $DBPASS
-echo dbserver: $DBSERVER
-echo dbname: $DBNAME
-echo wikiuser: $WIKIUSER
-echo wikipwd: $WIKIPWD
-echo wikiname: $WIKINAME
-echo Mediawiki Main Version: $MEDIAWIKIVERSION
-echo Mediawiki Minor Version: $MEDIAWIKIMINORVERSION
-echo Project Directory: $PROJECTDIR
+echo $(date) - Check Config Parameters - >> $PROJECTDIR/install/linux/wikijournals.log
 
-echo check HTMLDIR
+echo $(date) html directory: $HTMLDIR >> $PROJECTDIR/install/linux/wikijournals.log
+echo $(date) wikijournals directory: $WIKIDIR >> $PROJECTDIR/install/linux/wikijournals.log
+echo $(date) dbuser: $DBUSER >> $PROJECTDIR/install/linux/wikijournals.log
+echo $(date) dbpass: $DBPASS >> $PROJECTDIR/install/linux/wikijournals.log
+echo $(date) dbserver: $DBSERVER >> $PROJECTDIR/install/linux/wikijournals.log
+echo $(date) dbname: $DBNAME >> $PROJECTDIR/install/linux/wikijournals.log
+echo $(date) wikiuser: $WIKIUSER >> $PROJECTDIR/install/linux/wikijournals.log
+echo $(date) wikipwd: $WIKIPWD >> $PROJECTDIR/install/linux/wikijournals.log
+echo $(date) wikiname: $WIKINAME >> $PROJECTDIR/install/linux/wikijournals.log
+echo $(date) Mediawiki Main Version: $MEDIAWIKIVERSION >> $PROJECTDIR/install/linux/wikijournals.log
+echo $(date) Mediawiki Minor Version: $MEDIAWIKIMINORVERSION >> $PROJECTDIR/install/linux/wikijournals.log
+echo $(date) Project Directory: $PROJECTDIR >> $PROJECTDIR/install/linux/wikijournals.log
+
+echo $(date) check HTMLDIR >> $PROJECTDIR/install/linux/wikijournals.log
 
 if [ -d "$HTMLDIR" ]
 then
-echo "Directory $HTMLDIR exists"
+echo $(date) Directory $HTMLDIR exists >> $PROJECTDIR/install/linux/wikijournals.log
 else
-echo "Directory $HTMLDIR not exists"
+echo $(date) Directory $HTMLDIR not exists >> $PROJECTDIR/install/linux/wikijournals.log
 exit 1
 fi
 
-echo "Check write access for html directory"
+echo $(date) Check write access for html directory >> $PROJECTDIR/install/linux/wikijournals.log
 
 if [ -w "$HTMLDIR" ];
 then
-echo "directory "$HTMLDIR" is writeable"
+echo $(date) directory "$HTMLDIR" is writeable >> $PROJECTDIR/install/linux/wikijournals.log
 else
-echo "Directory $HTMLDIR not writable"
+echo $(date) Directory $HTMLDIR not writable >> $PROJECTDIR/install/linux/wikijournals.log
 exit 2
 fi
 
-echo "Check Database Parameters"
+echo $(date) Check Database Parameters >> $PROJECTDIR/install/linux/wikijournals.log
 
 RESULT=`mysql -u$DBUSER -p$DBPASS -e "SHOW DATABASES" | grep $DBNAME`
 echo $RESULT
 if  [ "$RESULT" = "$DBNAME" ];
 then
-echo "Database $DBNAME exist"
+echo $(date) Database $DBNAME exist >> $PROJECTDIR/install/linux/wikijournals.log
 else
-echo "Database $DBNAME not exist"
+echo $(date) Database $DBNAME not exist >> $PROJECTDIR/install/linux/wikijournals.log
 exit 3
 fi
 
-echo "check Mediawiki Version"
+echo $(date) check Mediawiki Version >> $PROJECTDIR/install/linux/wikijournals.log
 
 wget --spider https://releases.wikimedia.org/mediawiki/$MEDIAWIKIVERSION/mediawiki-$MEDIAWIKIVERSION.$MEDIAWIKIMINORVERSION.tar.gz
 if [ $? -eq 0 ]
 then
-  echo "Mediawiki Version exis"
+  echo $(date) Mediawiki Version exists >> $PROJECTDIR/install/linux/wikijournals.log
 
 else
-  echo "Mediawiki Version not exists"
+  echo $(date) Mediawiki Version not exists >> $PROJECTDIR/install/linux/wikijournals.log
   exit 4
 fi
 
-echo "Check if Project Directory exists"
+echo $(date) Check if Project Directory exists >> $PROJECTDIR/install/linux/wikijournals.log
 
 if [ -d "$PROJECTDIR" ]
 then
-echo "Directory $PROJECTDIR exists"
+echo $(date) Directory $PROJECTDIR exists >> $PROJECTDIR/install/linux/wikijournals.log
 else
-echo "Directory $PROJECTDIR not exists"
+echo $(date) Directory $PROJECTDIR not exists >> $PROJECTDIR/install/linux/wikijournals.log
 exit 5
 fi
 
-echo "Check if Project Directory contains Install directories"
+# echo "Check if Project Directory contains Install directories"
+
+echo $(date) - Check Config Parameters successful - >> $PROJECTDIR/install/linux/wikijournals.log
