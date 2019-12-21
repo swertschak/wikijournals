@@ -88,3 +88,8 @@ ENV/
 # Rope project settings
 .ropeproject
 /install/Install_Wikijournals_Test.sh
+/.idea/encodings.xml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/vcs.xml
+/.idea/wikijournals.iml
