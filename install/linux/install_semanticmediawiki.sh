@@ -13,7 +13,7 @@ then
   exit 1
 fi
 
-composer require mediawiki/semantic-media-wiki "3.1.0"
+composer require mediawiki/semantic-media-wiki "3.1.1"
 if [ $? -ne 0 ]
 then
   echo $(date) Install Semantic Mediawiki using composer failed >> $PROJECTDIR/install/linux/wikijournals.log
