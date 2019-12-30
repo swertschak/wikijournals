@@ -38,7 +38,7 @@ exit 1
 
 cd ..
 
-call composer require mediawiki/maps "7.7.0"
+call composer require mediawiki/maps "7.15.4"
 if %ERRORLEVEL% NEQ 0 (
 echo %date%-%time% Install Maps using composer failed >> %PROJECTDIR%\install\windows\wikijournals.log
 exit 1

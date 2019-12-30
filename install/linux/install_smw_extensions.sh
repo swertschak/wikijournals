@@ -44,7 +44,7 @@ fi
 
 cd ..
 
-composer require mediawiki/maps "7.7.0"
+composer require mediawiki/maps "7.15.4"
 if [ $? -ne 0 ]
 then
   $(date) echo Install Maps using composer failed >> $PROJECTDIR/install/linux/wikijournals.log
