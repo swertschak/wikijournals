@@ -4,7 +4,7 @@ echo off
 
 . $(pwd)/wikijournals.conf
 
-echo $(date) - Install Semantic Mediawiki - >> $PROJECTDIR/install/linux/wikijournals.log
+echo $(date) - Update Semantic Mediawiki - >> $PROJECTDIR/install/linux/wikijournals.log
 
 cd $HTMLDIR/$WIKIDIR
 if [ $? -ne 0 ]
@@ -17,13 +17,6 @@ composer require mediawiki/semantic-media-wiki $SMWVERSION
 if [ $? -ne 0 ]
 then
   echo $(date) Install Semantic Mediawiki using composer failed >> $PROJECTDIR/install/linux/wikijournals.log
-  exit 1
-fi
-
-cat $PROJECTDIR/config/configSMW.txt >> LocalSettings.php
-if [ $? -ne 0 ]
-then
-  echo $(date) Appending SMW Config to LocalSettings.php failed >> $PROJECTDIR/install/linux/wikijournals.log
   exit 1
 fi
 
@@ -48,4 +41,4 @@ then
   exit 1
 fi
 
-echo $(date) - Semantic Mediawiki installed succesful - >> $PROJECTDIR/install/linux/wikijournals.log
+echo $(date) - Semantic Mediawiki updated succesful - >> $PROJECTDIR/install/linux/wikijournals.log
