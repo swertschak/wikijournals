@@ -17,6 +17,10 @@ echo $(date) wikipwd: $WIKIPWD >> $PROJECTDIR/install/linux/wikijournals.log
 echo $(date) wikiname: $WIKINAME >> $PROJECTDIR/install/linux/wikijournals.log
 echo $(date) Mediawiki Main Version: $MEDIAWIKIVERSION >> $PROJECTDIR/install/linux/wikijournals.log
 echo $(date) Mediawiki Minor Version: $MEDIAWIKIMINORVERSION >> $PROJECTDIR/install/linux/wikijournals.log
+echo $(date) SMW Version: $SMWVERSION >> $PROJECTDIR/install/linux/wikijournals.log
+echo $(date) SMW Result Format Version: $SMWRESULTFORMATVERSION >> $PROJECTDIR/install/linux/wikijournals.log
+echo $(date) SMW Compound Queries Version: $SMWCOMPOUNDQUERIESVERSION >> $PROJECTDIR/install/linux/wikijournals.log
+echo $(date) Maps Version: $MAPSVERSION >> $PROJECTDIR/install/linux/wikijournals.log
 echo $(date) Project Directory: $PROJECTDIR >> $PROJECTDIR/install/linux/wikijournals.log
 
 echo $(date) check HTMLDIR >> $PROJECTDIR/install/linux/wikijournals.log

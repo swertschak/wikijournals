@@ -6,18 +6,6 @@ echo Check command line parameter
 
 . $(pwd)/wikijournals.conf
 
-echo html directory: $HTMLDIR
-echo wikijournals directory: $WIKIDIR
-echo dbuser: $DBUSER
-echo dbpass: $DBPASS
-echo dbserver: $DBSERVER
-echo dbname: $DBNAME
-echo wikiuser: $WIKIUSER
-echo wikipwd: $WIKIPWD
-echo wikiname: $WIKINAME
-echo Mediawiki Main Version: $MEDIAWIKIVERSION
-echo Mediawiki Minor Version: $MEDIAWIKIMINORVERSION
-
 echo $(date) - Install Mediawiki - >> $PROJECTDIR/install/linux/wikijournals.log
 
 echo $(date) Download Mediawiki >> $PROJECTDIR/install/linux/wikijournals.log

@@ -44,21 +44,22 @@ fi
 
 cd ..
 
-composer require mediawiki/maps "7.15.4"
+composer require mediawiki/maps $MAPSVERSION
 if [ $? -ne 0 ]
 then
   $(date) echo Install Maps using composer failed >> $PROJECTDIR/install/linux/wikijournals.log
   exit 1
 fi
 
-composer require mediawiki/semantic-result-formats "3.1.0"
+
+composer require mediawiki/semantic-result-formats $SMWRESULTFORMATVERSION
 if [ $? -ne 0 ]
 then
   $(date) echo Install Semantic Result Formats using composer failed >> $PROJECTDIR/install/linux/wikijournals.log
   exit 1
 fi
 
-composer require mediawiki/semantic-compound-queries "2.1.0"
+composer require mediawiki/semantic-compound-queries $SMWCOMPOUNDQUERIESVERSION
 if [ $? -ne 0 ]
 then
   $(date) echo Install Semantic Compund Queries using composer failed >> $PROJECTDIR/install/linux/wikijournals.log
