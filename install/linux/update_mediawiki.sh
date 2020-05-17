@@ -28,39 +28,30 @@ then
   exit 1
 fi
 
-mv mediawiki-$MEDIAWIKIVERSION.$MEDIAWIKIMINORVERSION $WIKIDIR
+echo $(date) Copy new content from mediawiki into wikijournals directory >> $PROJECTDIR/install/linux/wikijournals.log
+cp -r mediawiki-$MEDIAWIKIVERSION.$MEDIAWIKIMINORVERSION/* $WIKIDIR/
+
 if [ $? -ne 0 ]
 then
-  echo $(date) Move Mediawiki direcory failed >> $PROJECTDIR/install/linux/wikijournals.log
+  echo $(date) Copy Mediawiki Content into wikijournals directory failed >> $PROJECTDIR/install/linux/wikijournals.log
   exit 1
 fi
 
 rm mediawiki-$MEDIAWIKIVERSION.$MEDIAWIKIMINORVERSION.tar.gz
+
 if [ $? -ne 0 ]
 then
   echo $(date) Remove Mediawiki download failed >> $PROJECTDIR/install/linux/wikijournals.log
   exit 1
 fi
 
-echo $(date) Set rights for www-data >> $PROJECTDIR/install/linux/wikijournals.log
+rm -r mediawiki-$MEDIAWIKIVERSION.$MEDIAWIKIMINORVERSION
 
-chown -cR www-data:www-data $WIKIDIR
 if [ $? -ne 0 ]
 then
-  echo $(date) Setting rights for Mediawiki Directory failed >> $PROJECTDIR/install/linux/wikijournals.log
+  echo $(date) Remove Mediawiki directory failed >> $PROJECTDIR/install/linux/wikijournals.log
   exit 1
 fi
-
-echo $(date) Install Mediawiki >> $PROJECTDIR/install/linux/wikijournals.log
-
-
-cd $HTMLDIR/$WIKIDIR
-if [ $? -ne 0 ]
-then
-  echo $(date) Change to Wikijournals Directory failed >> $PROJECTDIR/install/linux/wikijournals.log
-  exit 1
-fi
-
 
 cd $PROJECTDIR/install/linux
 if [ $? -ne 0 ]

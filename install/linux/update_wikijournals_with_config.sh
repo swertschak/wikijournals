@@ -22,12 +22,12 @@ echo Maps Version: $MAPSVERSION
 
 echo $(date) = Update Wikijournals = > $PROJECTDIR/install/linux/wikijournals.log
 
-#sh ./install_mediawiki.sh
-#if [ $? -ne 0 ]
-#then
-#  echo "Mediawiki installation failed"
-#  exit 1
-#fi
+sh ./update_mediawiki.sh
+if [ $? -ne 0 ]
+then
+  echo "Mediawiki update failed"
+  exit 1
+fi
 
 sh ./update_foreground.sh
 if [ $? -ne 0 ]
