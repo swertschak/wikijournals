@@ -12,7 +12,7 @@ echo %date%-%time% Changing to wikijournals directory failed >> %PROJECTDIR%\ins
 exit 1
 )
 
-call composer require mediawiki/semantic-media-wiki "3.1.1"
+call composer require mediawiki/semantic-media-wiki %SMWVERSION%
 if %ERRORLEVEL% NEQ 0 (
 echo %date%-%time% Install Semantic Mediawiki using composer failed >> %PROJECTDIR%\install\windows\wikijournals.log
 exit 1

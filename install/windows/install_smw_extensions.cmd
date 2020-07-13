@@ -38,19 +38,19 @@ exit 1
 
 cd ..
 
-call composer require mediawiki/maps "7.15.4"
+call composer require mediawiki/maps %MAPSVERSION%
 if %ERRORLEVEL% NEQ 0 (
 echo %date%-%time% Install Maps using composer failed >> %PROJECTDIR%\install\windows\wikijournals.log
 exit 1
 )
 
-call composer require mediawiki/semantic-result-formats "3.1.0"
+call composer require mediawiki/semantic-result-formats %SMWRESULTFORMATVERSION%
 if %ERRORLEVEL% NEQ 0 (
 echo %date%-%time% Install Semantic Result Formats using composer failed >> %PROJECTDIR%\install\windows\wikijournals.log
 exit 1
 )
 
-call composer require mediawiki/semantic-compound-queries "2.1.0"
+call composer require mediawiki/semantic-compound-queries %SMWCOMPOUNDQUERIESVERSION%
 if %ERRORLEVEL% NEQ 0 (
 echo %date%-%time% Install Semantic Compound Queries using composer failed >> %PROJECTDIR%\install\windows\wikijournals.log
 exit 1
